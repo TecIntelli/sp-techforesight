@@ -24,7 +24,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Use Case 2',
     icon: 'bar-chart-outline',
-    link: '',
+    link: 'pages/charts',
   },
   {
     title: 'Use Case 3',
