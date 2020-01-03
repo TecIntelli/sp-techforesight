@@ -24,7 +24,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Use Case 2',
     icon: 'bar-chart-outline',
-    link: 'pages/charts',
+    children: [
+      {
+        title: 'd3pie',
+        link: '/pages/d3pie',
+      },
+    ],
   },
   {
     title: 'Use Case 3',

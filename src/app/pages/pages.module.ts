@@ -6,6 +6,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { TestModule } from './test/test.module';
 import { PagesRoutingModule } from './pages-routing.module';
+import { D3PieModule } from './d3pie/d3pie.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { PagesRoutingModule } from './pages-routing.module';
     NbMenuModule,
     DashboardModule,
     TestModule,
+    D3PieModule,
   ],
   declarations: [
     PagesComponent,

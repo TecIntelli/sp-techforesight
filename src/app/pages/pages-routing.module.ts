@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TestComponent } from './test/test.component';
+import { D3PieComponent } from './d3pie/d3pie.component';
 
 const routes: Routes = [{
   path: '',
@@ -16,6 +17,10 @@ const routes: Routes = [{
     {
       path: 'test',
       component: TestComponent,
+    },
+    {
+      path: 'd3pie',
+      component: D3PieComponent,
     },
     {
       path: '',
