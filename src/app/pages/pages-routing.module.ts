@@ -5,6 +5,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TestComponent } from './test/test.component';
 import { D3PieComponent } from './d3pie/d3pie.component';
+import { D3HeatmapComponent } from './heatmap/heatmap.component';
 
 const routes: Routes = [{
   path: '',
@@ -21,6 +22,10 @@ const routes: Routes = [{
     {
       path: 'd3pie',
       component: D3PieComponent,
+    },
+    {
+      path: 'heatmap',
+      component: D3HeatmapComponent,
     },
     {
       path: '',

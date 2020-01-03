@@ -29,6 +29,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'd3pie',
         link: '/pages/d3pie',
       },
+      {
+        title: 'heatmap',
+        link: '/pages/heatmap',
+      },
     ],
   },
   {

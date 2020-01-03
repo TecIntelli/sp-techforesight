@@ -7,6 +7,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { TestModule } from './test/test.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { D3PieModule } from './d3pie/d3pie.module';
+import { D3HeatmapModule } from './heatmap/heatmap.module';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { D3PieModule } from './d3pie/d3pie.module';
     DashboardModule,
     TestModule,
     D3PieModule,
+    D3HeatmapModule,
   ],
   declarations: [
     PagesComponent,
