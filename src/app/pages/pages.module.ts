@@ -6,7 +6,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { TestModule } from './test/test.module';
 import { PagesRoutingModule } from './pages-routing.module';
-import { D3PieModule } from './ngxradar/ngxradar.module';
+import { D3RadarModule } from './ngxradar/ngxradar.module';
 import { D3HeatmapModule } from './heatmap/heatmap.module';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { D3HeatmapModule } from './heatmap/heatmap.module';
     NbMenuModule,
     DashboardModule,
     TestModule,
-    D3PieModule,
+    D3RadarModule,
     D3HeatmapModule,
   ],
   declarations: [

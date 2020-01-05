@@ -15,4 +15,4 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     NGXRadarComponent,
   ],
 })
-export class D3PieModule { }
+export class D3RadarModule { }
