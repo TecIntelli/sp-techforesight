@@ -26,12 +26,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'bar-chart-outline',
     children: [
       {
-        title: 'd3pie',
-        link: '/pages/d3pie',
+        title: 'Radar',
+        link: '/pages/Radar',
       },
       {
-        title: 'heatmap',
-        link: '/pages/heatmap',
+        title: 'Heatmap',
+        link: '/pages/Heatmap',
       },
     ],
   },

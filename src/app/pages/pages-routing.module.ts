@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TestComponent } from './test/test.component';
-import { D3PieComponent } from './d3pie/d3pie.component';
+import { NGXRadarComponent } from './ngxradar/ngxradar.component';
 import { D3HeatmapComponent } from './heatmap/heatmap.component';
 
 const routes: Routes = [{
@@ -20,11 +20,11 @@ const routes: Routes = [{
       component: TestComponent,
     },
     {
-      path: 'd3pie',
-      component: D3PieComponent,
+      path: 'Radar',
+      component: NGXRadarComponent,
     },
     {
-      path: 'heatmap',
+      path: 'Heatmap',
       component: D3HeatmapComponent,
     },
     {

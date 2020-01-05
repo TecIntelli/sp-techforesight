@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { multi } from './data';
+import { NbThemeService } from '@nebular/theme';
+import { multi } from '../../../assets/data';
 
 @Component({
   selector: 'ngx-d3heatmap',
@@ -10,28 +11,28 @@ export class D3HeatmapComponent {
   single: any[];
   multi: any[];
 
-  view: any[] = [700, 400];
+  view: any[] = [600, 400];
 
   // options
   showXAxis = true;
   showYAxis = true;
-  gradient = false;
-  showLegend = true;
+  gradient = true;
+  showLegend = false;
   showXAxisLabel = true;
-  xAxisLabel = 'Country';
+  xAxisLabel = 'Technologie';
   showYAxisLabel = true;
-  yAxisLabel = 'Population';
-
+  yAxisLabel = 'Applikationsfelder/ Branchen';
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#66e4e8', '#66a9e8', '#077cdb', '#8509e3']
   };
+  trimXAxisTicks = false;
+  trimYAxisTicks = false;
 
   constructor() {
-    Object.assign(this, { multi });
+    Object.assign(this, {multi})
   }
 
   onSelect(event) {
-    // tslint:disable-next-line: no-console
     console.log(event);
   }
 

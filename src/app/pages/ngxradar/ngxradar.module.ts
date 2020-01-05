@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { NbCardModule } from '@nebular/theme';
 
 import { ThemeModule } from '../../@theme/theme.module';
-import { D3PieComponent } from './d3pie.component';
+import { NGXRadarComponent } from './ngxradar.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
@@ -12,7 +12,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     NgxChartsModule,
   ],
   declarations: [
-    D3PieComponent,
+    NGXRadarComponent,
   ],
 })
 export class D3PieModule { }
