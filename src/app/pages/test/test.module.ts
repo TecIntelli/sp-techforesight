@@ -3,6 +3,7 @@ import { NbCardModule } from '@nebular/theme';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { TestComponent } from './test.component';
+import { ApiService } from '../../services/api.service';
 
 @NgModule({
   imports: [
@@ -12,5 +13,6 @@ import { TestComponent } from './test.component';
   declarations: [
     TestComponent,
   ],
+  providers: [ApiService],
 })
 export class TestModule { }

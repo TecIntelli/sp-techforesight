@@ -44,6 +44,7 @@
     "@nebular/security": "4.1.2",
     "@nebular/theme": "4.1.2",
     "@swimlane/ngx-charts": "^13.0.1",
+    "@swimlane/ngx-datatable": "^16.0.3",
     "angular-google-charts": "^0.1.6",
     "bootstrap": "4.3.1",
     "classlist.js": "1.1.20150312",
