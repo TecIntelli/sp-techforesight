@@ -16,15 +16,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'bar-chart-outline',
     children: [
       {
-        title: 'test',
-        link: '/pages/test',
+        title: 'Datenübersicht',
+        link: '/pages/Technologydata',
       },
-    ],
-  },
-  {
-    title: 'Use Case 2',
-    icon: 'bar-chart-outline',
-    children: [
       {
         title: 'Radar',
         link: '/pages/Radar',
@@ -34,6 +28,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/Heatmap',
       },
     ],
+  },
+  {
+    title: 'Use Case 3',
+    icon: 'bar-chart-outline',
+    link: '',
   },
   {
     title: 'Use Case 3',

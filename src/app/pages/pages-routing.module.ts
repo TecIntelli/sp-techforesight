@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { TestComponent } from './test/test.component';
-import { NGXRadarComponent } from './ngxradar/ngxradar.component';
-import { D3HeatmapComponent } from './heatmap/heatmap.component';
+import { UseCase1Component } from './usecase1/usecase1.component';
+import { NGXRadarComponent } from './usecase1/ngxradar/ngxradar.component';
+import { D3HeatmapComponent } from './usecase1/ngxheatmap/heatmap.component';
 
 const routes: Routes = [{
   path: '',
@@ -16,8 +16,8 @@ const routes: Routes = [{
       component: DashboardComponent,
     },
     {
-      path: 'test',
-      component: TestComponent,
+      path: 'Technologydata',
+      component: UseCase1Component,
     },
     {
       path: 'Radar',

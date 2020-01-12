@@ -4,10 +4,10 @@ import { NbMenuModule } from '@nebular/theme';
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { TestModule } from './test/test.module';
+import { UseCase1Module } from './usecase1/usecase1.module';
 import { PagesRoutingModule } from './pages-routing.module';
-import { D3RadarModule } from './ngxradar/ngxradar.module';
-import { D3HeatmapModule } from './heatmap/heatmap.module';
+import { D3RadarModule } from './usecase1/ngxradar/ngxradar.module';
+import { D3HeatmapModule } from './usecase1/ngxheatmap/heatmap.module';
 
 @NgModule({
   imports: [
@@ -15,7 +15,7 @@ import { D3HeatmapModule } from './heatmap/heatmap.module';
     ThemeModule,
     NbMenuModule,
     DashboardModule,
-    TestModule,
+    UseCase1Module,
     D3RadarModule,
     D3HeatmapModule,
   ],

@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "project": {
+      "label": "Technologien - Applikationsfelder / Branchen",
+      "description": "encoded / parsed text with HTML tags",
+      "modified": "24.10.2019"
+    },
+    "relation": [
+      {
+        "parameter_1": {
+          "label": "Technologie"
+        },
+        "parameter_2": {
+          "label": "Applikationsfelder / Branchen"
+        },
+        "parameter_3": {
+          "label": "Häufigkeit der Nennungen in Veröffentlichungen",
+          "levels": [
+            {
+              "value": 1,
+              "label": "unterdurchschnittlich"
+            },
+            {
+              "value": 2,
+              "label": "durchschnittlich"
+            },
+            {
+              "value": 3,
+              "label": "überschnittlich"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "elements": [
+    {
+      "label": "Deep learning algorithms increase cancer detection dramatically.",
+      "description": "encoded / parsed text with HTML tags",
+      "parameter_1": {
+        "value": "Deep Learning",
+        "description": "encoded / parsed text with HTML tags"
+      },
+      "parameter_2": {
+        "value": "Cancer detection",
+        "description": "encoded / parsed text with HTML tags"
+      },
+      "parameter_3": {
+        "value": 3
+      }
+    },
+    {
+      "label": "test test test",
+      "description": "encoded / parsed text with HTML tags",
+      "parameter_1": {
+        "value": "Deep Learning",
+        "description": "encoded / parsed text with HTML tags"
+      },
+      "parameter_2": {
+        "value": "Technology Management",
+        "description": "encoded / parsed text with HTML tags"
+      },
+      "parameter_3": {
+        "value": 3
+      }
+    },
+    {
+      "label": "test test test test",
+      "description": "encoded / parsed text with HTML tags",
+      "parameter_1": {
+        "value": "Deep Learning",
+        "description": "encoded / parsed text with HTML tags"
+      },
+      "parameter_2": {
+        "value": "HR",
+        "description": "encoded / parsed text with HTML tags"
+      },
+      "parameter_3": {
+        "value": 1
+      }
+    },
+    {
+      "label": "test test test",
+      "description": "encoded / parsed text with HTML tags",
+      "parameter_1": {
+        "value": "Artificial Intelligence",
+        "description": "encoded / parsed text with HTML tags"
+      },
+      "parameter_2": {
+        "value": "Cancer detection",
+        "description": "encoded / parsed text with HTML tags"
+      },
+      "parameter_3": {
+        "value": 2
+      }
+    },
+    {
+      "label": "test test test test",
+      "description": "encoded / parsed text with HTML tags",
+      "parameter_1": {
+        "value": "Artificial Intelligence",
+        "description": "encoded / parsed text with HTML tags"
+      },
+      "parameter_2": {
+        "value": "Technology Management",
+        "description": "encoded / parsed text with HTML tags"
+      },
+      "parameter_3": {
+        "value": 3
+      }
+    },
+    {
+      "label": "test",
+      "description": "encoded / parsed text with HTML tags",
+      "parameter_1": {
+        "value": "Artificial Intelligence",
+        "description": "encoded / parsed text with HTML tags"
+      },
+      "parameter_2": {
+        "value": "HR",
+        "description": "encoded / parsed text with HTML tags"
+      },
+      "parameter_3": {
+        "value": 1
+      }
+    }
+  ]
+}

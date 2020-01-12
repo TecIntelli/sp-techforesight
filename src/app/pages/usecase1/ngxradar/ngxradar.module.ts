@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { NbCardModule } from '@nebular/theme';
 
-import { ThemeModule } from '../../@theme/theme.module';
-import { D3HeatmapComponent } from './heatmap.component';
+import { ThemeModule } from '../../../@theme/theme.module';
+import { NGXRadarComponent } from './ngxradar.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
@@ -12,7 +12,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     NgxChartsModule,
   ],
   declarations: [
-    D3HeatmapComponent,
+    NGXRadarComponent,
   ],
 })
-export class D3HeatmapModule { }
+export class D3RadarModule { }

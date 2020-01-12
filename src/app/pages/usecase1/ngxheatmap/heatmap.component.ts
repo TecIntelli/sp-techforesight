@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
-import { multi } from '../../../assets/data';
+import { multi } from '../../../../assets/data';
 
 @Component({
   selector: 'ngx-d3heatmap',

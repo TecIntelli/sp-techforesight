@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { NbCardModule } from '@nebular/theme';
 
 import { ThemeModule } from '../../@theme/theme.module';
-import { TestComponent } from './test.component';
+import { UseCase1Component } from './usecase1.component';
 import { ApiService } from '../../services/api.service';
 
 @NgModule({
@@ -11,8 +11,8 @@ import { ApiService } from '../../services/api.service';
     ThemeModule,
   ],
   declarations: [
-    TestComponent,
+    UseCase1Component,
   ],
   providers: [ApiService],
 })
-export class TestModule { }
+export class UseCase1Module { }

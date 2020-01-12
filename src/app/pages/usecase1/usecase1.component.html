@@ -7,18 +7,12 @@
       <nb-card-body>
 
         <h5 class="grid-h">KI Technologie/-ansätze</h5>
-
-        <p>test test test</p>
-
+        <br>
+        <div>
+          <p *ngFor="let item of technologydatas">Technologie: {{item.parameter_1.value}} | Applikationsfeld: {{item.parameter_2.value}} | Häufigkeit der Nennung: {{item.parameter_3.value}}</p>
+        </div>
       </nb-card-body>
     </nb-card>
   </div>
-</div>
 
-
-<h1>Bücher</h1>
-
-<div *ngFor="let technology of technologies">
-  <h3>{{ technology.Technologie }} </h3>
-</div>
 
