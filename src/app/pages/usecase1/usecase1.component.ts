@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'ngx-usecase1',
@@ -16,11 +15,7 @@ export class UseCase1Component implements OnInit {
   ngOnInit() {
     this.config.getData()
       .subscribe(data => {
-        console.log(data),
-        // wirft error falls etwas an der api nicht passt
-        (err:  HttpErrorResponse) => {
-         console.log (err.message + ' -Daten aus API werden nicht geladen- ');
-          };
+        console.log(data);
         },
       );
 
@@ -32,3 +27,5 @@ export class UseCase1Component implements OnInit {
       });
   }
 }
+
+
