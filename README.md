@@ -1,4 +1,4 @@
-# TFE Dashboard [![Build Status] (on Work)] 
+# TFE Dashboard [![Build Status](https://travis-ci.org/akveo/ngx-admin.svg?branch=master)](https://travis-ci.org/akveo/ngx-admin) 
 
 # Einleitung
 Projekt wurde im Rahmen meiner Masterarbeit erstellt.
