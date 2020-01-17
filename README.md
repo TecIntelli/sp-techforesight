@@ -1,4 +1,4 @@
-# TFE Dashboard [![Build Status]()]() 
+# TFE Dashboard
 
 # Einleitung
 Projekt wurde im Rahmen meiner Masterarbeit erstellt.
