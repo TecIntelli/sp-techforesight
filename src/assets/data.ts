@@ -1,4 +1,4 @@
-export var multi = [
+export let multi = [
   {
     "name": "Deep Learning",
     "series": [

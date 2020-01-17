@@ -17,7 +17,7 @@ export class D3HeatmapComponent {
   showXAxis = true;
   showYAxis = true;
   gradient = true;
-  showLegend = false;
+  showLegend = true; // Legende ein-/ausblenden
   showXAxisLabel = true;
   xAxisLabel = 'Technologie';
   showYAxisLabel = true;
