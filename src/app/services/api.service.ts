@@ -35,14 +35,19 @@ export class ApiService {
       'The API doesn´t work, please try again later.');
   }
 
-
-
-  getData(): Observable<RootObject> {
-    return this.http.get<RootObject>(this.api, this.httpOptions).pipe(
+  getData(): Observable<ApiObject> {
+    return this.http.get<ApiObject>(this.api, this.httpOptions).pipe(
       retry(3),
       catchError(this.handleError),
     );
   }
+
+/*  getData(): Observable<RootObject> {
+    return this.http.get<RootObject>(this.api, this.httpOptions).pipe(
+      retry(3),
+      catchError(this.handleError),
+    );
+  }*/
 }
 
 
