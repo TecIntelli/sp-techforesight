@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import {MultiItem} from '../../models/ngxradar';
 
 @Component({
   selector: 'ngx-usecase1',
@@ -12,12 +13,41 @@ Diese Komponente liest die Date aus der api.service.ts aus und erhält somit das
 
 //Laden aller json Daten mit Hilfe des ApiService
 export class UseCase1Component implements OnInit {
-  technologydatas: any;
+  // technologydatas: any;
+  apiData: MultiItem[];
 
-  constructor(private config: ApiService) {}
+  constructor(private config: ApiService) {
+    this.apiData = [];
+  }
 
   ngOnInit() {
     this.config.getData()
+      .subscribe(data => {
+          data.elements.forEach((item, index) => {
+            const mItem = this.apiData.find( param1 => param1.name === item.parameter_1.value);
+            if (mItem) {
+              const sItem = mItem.series.find(param2 => param2.name === item.parameter_2.value);
+              if (!sItem) {
+                mItem.series.push({
+                  name: item.parameter_2.value,
+                  value: item.parameter_3.value,
+                });
+              }
+            } else {
+              this.apiData.push({
+                name: item.parameter_1.value,
+                series: [{
+                  name: item.parameter_2.value,
+                  value: item.parameter_3.value,
+                }],
+              });
+            }
+          });
+          // Console log nur zur Überprüfung der Konvertierung
+          console.log(JSON.stringify(this.apiData));
+      });
+    
+/*    this.config.getData()
       .subscribe(data => {
         console.log(data);
         },
@@ -35,7 +65,7 @@ export class UseCase1Component implements OnInit {
                  '", "value":' + value[i].parameter_3.value + '},'
                 ;
                 console.log(a); }
-      });
+      });*/
   }
 }
 
