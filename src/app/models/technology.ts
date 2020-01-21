@@ -63,3 +63,9 @@ interface Project {
   description: string;
   modified: string;
 }
+
+// Eine alternative Definition für das API-Objekt mit einem Array von Element
+export interface ApiObject {
+  meta: Meta;
+  elements: Element[];
+}
