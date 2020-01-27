@@ -4,6 +4,7 @@ import { NbCardModule } from '@nebular/theme';
 import { ThemeModule } from '../../@theme/theme.module';
 import { UseCase1Component } from './usecase1.component';
 import { ApiService } from '../../services/api.service';
+import { UsedataService } from '../../services/usedata.service';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import { ApiService } from '../../services/api.service';
   declarations: [
     UseCase1Component,
   ],
-  providers: [ApiService],
+  providers: [ApiService, UsedataService ],
 })
 export class UseCase1Module { }

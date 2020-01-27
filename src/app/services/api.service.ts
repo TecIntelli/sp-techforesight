@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-import { RootObject } from '../models/technology';
+import { ApiObject } from '../models/technology.interface';
+
 
 @Injectable()
 export class ApiService {
@@ -41,13 +42,6 @@ export class ApiService {
       catchError(this.handleError),
     );
   }
-
-/*  getData(): Observable<RootObject> {
-    return this.http.get<RootObject>(this.api, this.httpOptions).pipe(
-      retry(3),
-      catchError(this.handleError),
-    );
-  }*/
 }
 
 

@@ -1,6 +1,7 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
-import { multi } from '../../../../assets/data';
+//import { multi } from '../../../../assets/data';
+import { UsedataService } from '../../../services/usedata.service';
 
 
 
@@ -9,10 +10,25 @@ import { multi } from '../../../../assets/data';
   selector: 'ngx-radar',
   templateUrl: './ngxradar.component.html',
   styleUrls: [ './ngxradar.component.scss' ],
+  providers: [UsedataService],
 })
 
-export class NGXRadarComponent implements OnDestroy {
-  multi: any[];
+export class NGXRadarComponent implements OnDestroy, OnInit {
+  // multi: any[];
+
+  constructor(public service: UsedataService, private theme: NbThemeService) {
+    this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
+      const colors: any = config.variables;
+      this.colorScheme = {
+        domain: [colors.primaryLight, colors.infoLight, colors.successLight, colors.warningLight, colors.dangerLight],
+      };
+    });
+  }
+
+  ngOnInit() {
+    // Methode aus Service muss eingelesen werden, ansonsten werden die Daten nicht geladen
+    this.service.ngxInputFormat();
+    }
 
 
   showLegend = true;
@@ -28,15 +44,6 @@ export class NGXRadarComponent implements OnDestroy {
   view: any[] = [600, 300];
   labelTrim: boolean = false;
 
-  constructor(private theme: NbThemeService) {
-    this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
-      const colors: any = config.variables;
-      this.colorScheme = {
-        domain: [colors.primaryLight, colors.infoLight, colors.successLight, colors.warningLight, colors.dangerLight],
-      };
-    });
-    Object.assign(this, { multi });
-  }
 
   ngOnDestroy(): void {
     this.themeSubscription.unsubscribe();
