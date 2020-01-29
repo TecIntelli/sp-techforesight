@@ -5,7 +5,9 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UseCase1Component } from './usecase1/usecase1.component';
 import { NGXRadarComponent } from './usecase1/ngxradar/ngxradar.component';
-import { D3HeatmapComponent } from './usecase1/ngxheatmap/heatmap.component';
+import { NGXHeatmapComponent } from './usecase1/ngxheatmap/heatmap.component';
+import { NGXBarChartComponent } from './usecase2/ngxbarchart/ngxbarchart.component';
+import { NgxGaugeChartComponent } from './usecase2/ngxgaugechart/ngxgaugechart.component';
 
 const routes: Routes = [{
   path: '',
@@ -25,12 +27,20 @@ const routes: Routes = [{
     },
     {
       path: 'Heatmap',
-      component: D3HeatmapComponent,
+      component: NGXHeatmapComponent,
     },
     {
       path: '',
       redirectTo: 'dashboard',
       pathMatch: 'full',
+    },
+    {
+      path: 'GroupedBarChart',
+      component: NGXBarChartComponent,
+    },
+    {
+      path: 'GaugeChart',
+      component: NgxGaugeChartComponent,
     },
   ],
 }];

@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>
+        Use Case 2
+      </nb-card-header>
+      <nb-card-body>
+
+        <h5 class="grid-h">Kompetenzträger bestimmter KI-Technologien</h5>
+
+        <p></p>
+
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>Gauge Chart<br>
+        KI Technologie: Deep Learning
+      </nb-card-header>
+      <nb-card-body>
+        <ngx-charts-gauge
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="service.single"
+            [legend]="legend"
+            [legendPosition]="legendPosition"
+            [legendTitle]="legendTitle"
+            (select)="onSelect($event)"
+            (activate)="onActivate($event)"
+            (deactivate)="onDeactivate($event)"
+            >
+        </ngx-charts-gauge>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

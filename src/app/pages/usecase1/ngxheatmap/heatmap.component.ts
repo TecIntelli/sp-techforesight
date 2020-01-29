@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 /* import { multi } from '../../../../assets/data'; */
 import { UsedataService } from '../../../services/usedata.service';
 
+
 @Component({
-  selector: 'ngx-d3heatmap',
+  selector: 'ngx-heatmap',
   templateUrl: './heatmap.component.html',
   styleUrls: ['./heatmap.component.scss'],
   providers: [UsedataService],
 })
-export class D3HeatmapComponent implements OnInit {
+export class NGXHeatmapComponent implements OnInit {
   //single: any[];
   //multi: any[];
 
@@ -39,6 +40,7 @@ export class D3HeatmapComponent implements OnInit {
   };
   trimXAxisTicks = false;
   trimYAxisTicks = false;
+
 
   /* constructor() {
     Object.assign(this, {multi})

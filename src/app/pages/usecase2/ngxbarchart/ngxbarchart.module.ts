@@ -1,18 +1,25 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { NbCardModule } from '@nebular/theme';
 
 import { ThemeModule } from '../../../@theme/theme.module';
-import { NGXRadarComponent } from './ngxradar.component';
+import { NGXBarChartComponent } from './ngxbarchart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { Api1Service } from '../../../services/api1.service';
+
+
+
 
 @NgModule({
   imports: [
+    CommonModule,
     NbCardModule,
     ThemeModule,
     NgxChartsModule,
   ],
   declarations: [
-    NGXRadarComponent,
+    NGXBarChartComponent,
   ],
+  providers:    [ Api1Service ]
 })
-export class NGXRadarModule { }
+export class NgxbarchartModule { }

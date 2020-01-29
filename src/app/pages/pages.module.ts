@@ -6,8 +6,11 @@ import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { UseCase1Module } from './usecase1/usecase1.module';
 import { PagesRoutingModule } from './pages-routing.module';
-import { D3RadarModule } from './usecase1/ngxradar/ngxradar.module';
-import { D3HeatmapModule } from './usecase1/ngxheatmap/heatmap.module';
+import { NGXRadarModule } from './usecase1/ngxradar/ngxradar.module';
+import { NGXHeatmapModule } from './usecase1/ngxheatmap/heatmap.module';
+import { Usecase2Module } from './usecase2/usecase2.module';
+import { NgxbarchartModule } from './usecase2/ngxbarchart/ngxbarchart.module';
+import { NgxGaugeChartModule } from './usecase2/ngxgaugechart/ngxgaugechart.module';
 
 @NgModule({
   imports: [
@@ -16,8 +19,11 @@ import { D3HeatmapModule } from './usecase1/ngxheatmap/heatmap.module';
     NbMenuModule,
     DashboardModule,
     UseCase1Module,
-    D3RadarModule,
-    D3HeatmapModule,
+    NGXRadarModule,
+    NGXHeatmapModule,
+    Usecase2Module,
+    NgxbarchartModule,
+    NgxGaugeChartModule,
   ],
   declarations: [
     PagesComponent,

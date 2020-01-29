@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 import { NbCardModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { NbIconModule } from '@nebular/theme';
+
 
 import { ThemeModule } from '../../../@theme/theme.module';
-import { D3HeatmapComponent } from './heatmap.component';
+import { NGXHeatmapComponent } from './heatmap.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { ApiService } from '../../../services/api.service';
-import { UsedataService } from '../../../services/usedata.service';
 
 @NgModule({
   imports: [
     NbCardModule,
     ThemeModule,
     NgxChartsModule,
+    NbEvaIconsModule,
+    NbIconModule,
   ],
   declarations: [
-    D3HeatmapComponent,
+    NGXHeatmapComponent,
   ],
-  providers: [ApiService, UsedataService ],
 })
-export class D3HeatmapModule { }
+export class NGXHeatmapModule { }

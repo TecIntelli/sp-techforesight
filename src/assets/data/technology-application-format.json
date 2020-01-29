@@ -61,7 +61,7 @@
         "description": "encoded / parsed text with HTML tags"
       },
       "parameter_3": {
-        "value": 3
+        "value": 2
       }
     },
     {
@@ -121,7 +121,7 @@
         "description": "encoded / parsed text with HTML tags"
       },
       "parameter_3": {
-        "value": 1
+        "value": 3
       }
     }
   ]

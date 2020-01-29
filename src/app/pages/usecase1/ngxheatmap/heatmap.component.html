@@ -15,7 +15,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-8">
     <nb-card>
       <nb-card-header>Heatmap</nb-card-header>
       <nb-card-body>
@@ -35,6 +35,19 @@
           [trimYAxisTicks] = "trimYAxisTicks"
           (select)="onSelect($event)">
         </ngx-charts-heat-map>
+      </nb-card-body>
+    </nb-card>
+  </div>
+
+  <div class="col-md-4">
+    <nb-card>
+      <nb-card-header></nb-card-header>
+      <nb-card-body> <h6>Häufigkeit der Nennungen in Veröffentlichungen</h6>
+        <ul class="zeichenkette">
+          <li><b>1</b> <nb-icon icon="arrow-forward-outline"></nb-icon> unterdurchschnittlich</li>
+          <li><b>2</b> <nb-icon icon="arrow-forward-outline"></nb-icon> durchschnittlich</li>
+          <li><b>3</b> <nb-icon icon="arrow-forward-outline"></nb-icon> überschnittlich</li>
+        </ul>
       </nb-card-body>
     </nb-card>
   </div>

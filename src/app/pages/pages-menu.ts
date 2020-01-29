@@ -30,9 +30,18 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
-    title: 'Use Case 3',
+    title: 'Use Case 2',
     icon: 'bar-chart-outline',
-    link: '',
+    children: [
+      {
+        title: 'Grouped Bar Chart',
+        link: '/pages/GroupedBarChart',
+      },
+      {
+        title: 'Gauge Chart',
+        link: '/pages/GaugeChart',
+      },
+    ],
   },
   {
     title: 'Use Case 3',

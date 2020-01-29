@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "project": {
+	  "name": "Technologien - Kompetenzträger",
+	  "description": "encoded / parsed text with HTML tags",
+	  "modified": "24.10.2019"
+	},
+	"relation": [
+    {
+	  "parameter_1": {
+	    "name": "Technologie",
+		"description": "encoded / parsed text with HTML tags"
+	  },
+	  "parameter_2": {
+	    "name": "Kompetenzträger / Organisation",
+		"description": "encoded / parsed text with HTML tags"
+	  },
+	  "parameter_3": {
+	    "name": "Häufigkeit der Nennungen in Veröffentlichungen",
+		"description": "encoded / parsed text with HTML tags"
+    }
+  }
+]
+},
+
+  "elements": [
+    {
+	  "parameter_1": {
+	    "value": "Deep Learning"
+	  },
+	  "parameter_2": {
+	    "value": "DFKI"
+	  },
+	  "parameter_3": {
+	    "value": 374
+	  }
+	},
+	{
+	  "parameter_1": {
+	    "value": "Deep Learning"
+	  },
+	  "parameter_2": {
+	    "value": "Fraunhofer Institut"
+	  },
+	  "parameter_3": {
+	    "value": 285
+	  }
+	},
+	{
+	  "parameter_1": {
+	    "value": "Deep Learning"
+	  },
+	  "parameter_2": {
+	    "value": "TUM"
+	  },
+	  "parameter_3": {
+	    "value": 567
+	  }
+	},
+	{
+	  "parameter_1": {
+	    "value": "Deep Learning"
+	  },
+	  "parameter_2": {
+	    "value": "RTHW Aachen"
+	  },
+	  "parameter_3": {
+	    "value": 345
+	  }
+	},
+	{
+	  "parameter_1": {
+	    "value": "Artificial Intelligence"
+	  },
+	  "parameter_2": {
+	    "value": "DFKI"
+	  },
+	  "parameter_3": {
+	    "value": 555
+	  }
+	},
+	{
+	  "parameter_1": {
+	    "value": "Artificial Intelligence"
+	  },
+	  "parameter_2": {
+	    "value": "Fraunhofer Institut"
+	  },
+	  "parameter_3": {
+	    "value": 432
+	  }
+	},
+	{
+	  "parameter_1": {
+	    "value": "Artificial Intelligence"
+	  },
+	  "parameter_2": {
+	    "value": "TUM"
+	  },
+	  "parameter_3": {
+	    "value": 765
+	  }
+	},
+	{
+	  "parameter_1": {
+	    "value": "Artificial Intelligence"
+	  },
+	  "parameter_2": {
+	    "value": "RTHW Aachen"
+	  },
+	  "parameter_3": {
+	    "value": 988
+	  }
+	}
+]
+}
+
