@@ -94,12 +94,28 @@ wandelt sie in das für ngx benötigte Input Format um */
             */
             this.apiData.forEach(x => this.result.find( y => y.name === x.name).series.push(x.series));
 
-            /* Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
-            console.log(this.result); */
+            //Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
+            //console.log(this.result);
           });
           /*
           Console log nur zur Überprüfung der Konvertierung, ob Teilergebnis korrekt vorliegt
            console.log(this.apiData);
            */
     }
+
+
+series1: Array <SeriesItem> = [];
+arr: any;
+
+ngxSingleInputFormat() {
+  this.config.getData().subscribe(data => {
+    data.elements.forEach((item, index) => {
+      const seriesArr = {"area": item.parameter_1.value, "name": item.parameter_2.value,"value":item.parameter_3.value};
+        this.series1.push(seriesArr);
+        //this.series1.map(x=>this.series1);
+      });
+      console.log(this.series1);
+        });
   }
+
+}
