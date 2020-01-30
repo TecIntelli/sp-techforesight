@@ -21,6 +21,10 @@ export class UseCase1Component implements OnInit {
 
   ngOnInit() {
     this.service.ngxSingleInputFormat();
+    // beim ersten Aufruf ist die Variable series1 noch leer, da der console Aufruf nicht wartet bis die Daten vom API-Aufruf zurück sind
+    // darum würde ich hier mit Observables arbeiten, die ein asynchrones Arbeiten ermöglichen (siehe usedate.service.ts)
+    // das erzeugte Observable kannst du dann einfach in dein HTML Template mit einer async-Pipe einbauen
+    // sobald die Daten über den Service geändert werden, werden sie auch in der Lautzeit im Template automatisch aktualisiert
     console.log(this.service.series1);
   }
 
@@ -30,7 +34,7 @@ export class UseCase1Component implements OnInit {
     actions: false,
     columns: {
       area: {
-        title: 'KI Technologie'
+        title: 'KI Technologie',
       },
       name: {
         title: 'Applikationsfelder / Branchen',
