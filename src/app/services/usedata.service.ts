@@ -104,18 +104,26 @@ wandelt sie in das für ngx benötigte Input Format um */
     }
 
 
-series1: Array <SeriesItem> = [];
-arr: any;
+  series1: Array <SeriesItem> = [];
+  arr: any;
+  
+  // die Daten werden als Observable abgelegt, um später stets auf den aktuellen Inhalt zugreifen zu können
+  private series1Data = new BehaviorSubject<SeriesItem[]>([]);
+  series1Data$ = this.series1Data.asObservable();
 
-ngxSingleInputFormat() {
-  this.config.getData().subscribe(data => {
-    data.elements.forEach((item, index) => {
-      const seriesArr = {"area": item.parameter_1.value, "name": item.parameter_2.value,"value":item.parameter_3.value};
+  ngxSingleInputFormat() {
+    // die Array-Instanz muss zu beginn leer sein, sonst hängt er bei jedem Aufruf des Service (d.h. hier bei jedem Aufruf der Komponente), dass Daten angehangen werden
+    this.series1 = [];
+    this.config.getData().subscribe(data => {
+      data.elements.forEach((item, index) => {
+        const seriesArr = {"area": item.parameter_1.value, "name": item.parameter_2.value,"value":item.parameter_3.value};
         this.series1.push(seriesArr);
-        //this.series1.map(x=>this.series1);
+        // this.series1.map(x=>this.series1);
       });
-      console.log(this.series1);
-        });
+      console.log('Usedata.Service: ' + this.series1);
+      // nachdem alle Daten im Array gespeichert sind, wird diese Array-Instanz als neuer Wert für das Observable gesetzt
+      this.series1Data.next(this.series1);
+    });
   }
 
 }
