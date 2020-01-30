@@ -17,7 +17,7 @@
 
   <nb-card>
     <nb-card-body>
-      <ng2-smart-table [settings]="settings" [source]="service.series1"> </ng2-smart-table>
+      <ng2-smart-table [settings]="settings" [source]="service.series1Data$ | async"> </ng2-smart-table>
     </nb-card-body>
   </nb-card>
 
