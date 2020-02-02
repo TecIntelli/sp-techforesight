@@ -46,7 +46,7 @@ export class UseCase1Component implements OnInit {
 };
 
 
-  //data: any = [{"area":"Deep Learning","name":"Cancer detection","value":3},{"area":"Deep Learning","name":"Technology Management","value":2},{"area":"Deep Learning","name":"HR","value":1},{"area":"Artificial Intelligence","name":"Cancer detection","value":2},{"area":"Artificial Intelligence","name":"Technology Management","value":3},{"area":"Artificial Intelligence","name":"HR","value":3}];
+  // data: any = [{"area":"Deep Learning","name":"Cancer detection","value":3},{"area":"Deep Learning","name":"Technology Management","value":2},{"area":"Deep Learning","name":"HR","value":1},{"area":"Artificial Intelligence","name":"Cancer detection","value":2},{"area":"Artificial Intelligence","name":"Technology Management","value":3},{"area":"Artificial Intelligence","name":"HR","value":3}];
 
 
   updateSort(sortRequest: NbSortRequest): void {

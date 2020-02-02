@@ -3,7 +3,7 @@ import { Api1Service } from './api1.service';
 import { MultiItem, SeriesItem } from '../models/datamodel';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class Usedata1Service {
 
@@ -21,41 +21,42 @@ ngxInputFormat() {
   this.config.getData().subscribe(data => {
     data.elements.forEach((item, index) => {
         const series: Array <SeriesItem> = [];
-        const seriesArr = {"name": item.parameter_2.value,"value":item.parameter_3.value};
+        const seriesArr = {'name': item.parameter_2.value, 'value': item.parameter_3.value};
           series.push(seriesArr);
         const multi = new MultiItem(item.parameter_1.value, seriesArr);
         this.apiData.push(multi);
         });
-        this.result = [... new Set(this.apiData.map(x => x.name))].map( x => ({ "name": x, "series": []}));
+        this.result = [... new Set(this.apiData.map(x => x.name))].map( x => ({ 'name': x, 'series': []}));
         this.apiData.forEach(x => this.result.find( y => y.name === x.name).series.push(x.series));
 
-        //Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
-        //console.log(this.result);
+        // Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
+        // console.log(this.result);
       });
 
-      //Console log nur zur Überprüfung der Konvertierung, ob Teilergebnis korrekt vorliegt
+      // Console log nur zur Überprüfung der Konvertierung, ob Teilergebnis korrekt vorliegt
       // console.log(this.apiData);
 }
 
-// JSON-Data to SingleSeries Format konvertieren
-single: any;
-ngxSingleInputFormat() {
-  this.config.getData().subscribe(data => {
-    data.elements.forEach((item, index) => {
-      if( item.parameter_1.value === 'Deep Learning') {
-        const series: Array <SeriesItem> = [];
-        const seriesArr = {"name": item.parameter_2.value,"value":item.parameter_3.value};
-          series.push(seriesArr);
+  // JSON-Data to SingleSeries Format konvertieren
+  single: any;
+  ngxSingleInputFormat() {
+    this.config.getData().subscribe(data => {
+      data.elements.forEach((item, index) => {
+        if ( item.parameter_1.value === 'Deep Learning') {
+          const series: Array <SeriesItem> = [];
+          const seriesArr = {'name': item.parameter_2.value, 'value': item.parameter_3.value};
+            series.push(seriesArr);
 
-        const multi = new MultiItem(item.parameter_1.value, seriesArr);
-        this.apiData.push(multi);}
+          const multi = new MultiItem(item.parameter_1.value, seriesArr);
+          this.apiData.push(multi);
+        }
         });
-        this.single = this.apiData.map(x=>x.series);
+        this.single = this.apiData.map(x => x.series);
 
-        //Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
-        //console.log(this.single);
+        // Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
+        // console.log(this.single);
       });
-}
+  }
 
 
 /* series: Array <SeriesItem> = [];
