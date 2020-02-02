@@ -1,4 +1,4 @@
-import { Component, NgModule,OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { Usedata1Service } from '../../../services/usedata1.service';
@@ -6,7 +6,7 @@ import { Usedata1Service } from '../../../services/usedata1.service';
 @Component({
   selector: 'ngx-bubblechart',
   templateUrl: './ngxgaugechart.component.html',
-  styleUrls: ['./ngxgaugechart.component.scss']
+  styleUrls: ['./ngxgaugechart.component.scss'],
 })
 export class NgxGaugeChartComponent implements OnInit {
 

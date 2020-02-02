@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { MultiItem, SeriesItem } from '../models/datamodel';
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -94,8 +95,8 @@ wandelt sie in das für ngx benötigte Input Format um */
             */
             this.apiData.forEach(x => this.result.find( y => y.name === x.name).series.push(x.series));
 
-            //Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
-            //console.log(this.result);
+            // Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
+            // console.log(this.result);
           });
           /*
           Console log nur zur Überprüfung der Konvertierung, ob Teilergebnis korrekt vorliegt
@@ -106,13 +107,14 @@ wandelt sie in das für ngx benötigte Input Format um */
 
   series1: Array <SeriesItem> = [];
   arr: any;
-  
+
   // die Daten werden als Observable abgelegt, um später stets auf den aktuellen Inhalt zugreifen zu können
   private series1Data = new BehaviorSubject<SeriesItem[]>([]);
   series1Data$ = this.series1Data.asObservable();
 
   ngxSingleInputFormat() {
-    // die Array-Instanz muss zu beginn leer sein, sonst hängt er bei jedem Aufruf des Service (d.h. hier bei jedem Aufruf der Komponente), dass Daten angehangen werden
+    // die Array-Instanz muss zu beginn leer sein, sonst hängt er bei jedem Aufruf des Service
+    // (d.h. hier bei jedem Aufruf der Komponente), dass Daten angehangen werden
     this.series1 = [];
     this.config.getData().subscribe(data => {
       data.elements.forEach((item, index) => {
