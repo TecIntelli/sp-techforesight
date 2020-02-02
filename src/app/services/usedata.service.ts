@@ -72,7 +72,7 @@ wandelt sie in das für ngx benötigte Input Format um */
               ]
             */
             const series: Array <SeriesItem> = [];
-            const seriesArr = {"name": item.parameter_2.value,"value":item.parameter_3.value};
+            const seriesArr = {'name': item.parameter_2.value, 'value': item.parameter_3.value};
               series.push(seriesArr);
             const multi = new MultiItem(item.parameter_1.value, seriesArr);
             this.apiData.push(multi);
@@ -87,7 +87,7 @@ wandelt sie in das für ngx benötigte Input Format um */
 
             - in 'result' wird Array mti eindeutigem Namen und leerem 'series Array' erstellt
             */
-            this.result = [... new Set(this.apiData.map(x => x.name))].map( x => ({ "name": x, "series": []}));
+            this.result = [... new Set(this.apiData.map(x => x.name))].map( x => ({ 'name': x, 'series': []}));
             /*
             - jedes 'apiData' - Objekt wird in Series Array eingelesen
             - um richtige Serienobjekt der apiData in das richtige 'result' Series Array einzulesen,
@@ -118,7 +118,7 @@ wandelt sie in das für ngx benötigte Input Format um */
     this.series1 = [];
     this.config.getData().subscribe(data => {
       data.elements.forEach((item, index) => {
-        const seriesArr = {"area": item.parameter_1.value, "name": item.parameter_2.value,"value":item.parameter_3.value};
+        const seriesArr = {'area': item.parameter_1.value, 'name': item.parameter_2.value,'value':item.parameter_3.value};
         this.series1.push(seriesArr);
         // this.series1.map(x=>this.series1);
       });
