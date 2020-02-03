@@ -11,6 +11,8 @@ import { NGXHeatmapModule } from './usecase1/ngxheatmap/heatmap.module';
 import { Usecase2Module } from './usecase2/usecase2.module';
 import { NgxbarchartModule } from './usecase2/ngxbarchart/ngxbarchart.module';
 import { NgxGaugeChartModule } from './usecase2/ngxgaugechart/ngxgaugechart.module';
+import { Usecase3Module } from './usecase3/usecase3.module';
+import { NgxPiechartgridModule } from './usecase3/ngx-piechartgrid/ngx-piechartgrid.module';
 
 @NgModule({
   imports: [
@@ -22,8 +24,10 @@ import { NgxGaugeChartModule } from './usecase2/ngxgaugechart/ngxgaugechart.modu
     NGXRadarModule,
     NGXHeatmapModule,
     Usecase2Module,
+    Usecase3Module,
     NgxbarchartModule,
     NgxGaugeChartModule,
+    NgxPiechartgridModule,
   ],
   declarations: [
     PagesComponent,

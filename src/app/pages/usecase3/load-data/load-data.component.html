@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>
+        Use Case 3
+      </nb-card-header>
+      <nb-card-body>
+        <h5 class="grid-h">Förderdatenbank vom Bund</h5>
+        <br>
+        <div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+    <nb-card>
+      <nb-card-body>
+        <div class="csv-file-chooser-section">
+          <h6>CSV Upload Optionen<br>---------------------------------</h6>
+          <br>
+          <p>
+            <label>
+              <span class="option"><b>(1)</b> Bitte trage ein Delimiter ein:</span>
+              <input type="text" nbInput placeholder="Delimiter" [(ngModel)]="delimiter" type="text" [value]="">
+            </label>
+          </p>
+          <p>
+            <label>
+            <span class="option"><b>(2)</b> Soll die erste Zeile als Überschrift übernommen werden?</span>
+              <nb-select  [(ngModel)]="header" placeholder="Select Entry">
+                <nb-option [value]="true">JA</nb-option>
+                <nb-option [value]="false">NEIN</nb-option>
+              </nb-select>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
+              accept=".csv" />
+            </label>
+          </p>
+        </div>
+        <ng2-smart-table [settings]="settings" [source]="this.csvRecords"> </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
+  </div>
+
+
+
+
+
+
+

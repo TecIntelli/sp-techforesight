@@ -3,11 +3,12 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { ApiObject } from '../models/technology.interface';
+@Injectable({
+  providedIn: 'root'
+})
+export class Api2Service {
 
-
-@Injectable()
-export class ApiService {
-  api = '../../assets/data/technology-application-format.json';
+  api = '../../assets/data/technology-expert-format.json';
 
   constructor(private http: HttpClient) { }
 
@@ -43,5 +44,3 @@ export class ApiService {
     );
   }
 }
-
-

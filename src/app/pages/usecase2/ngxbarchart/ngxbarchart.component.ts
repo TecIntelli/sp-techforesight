@@ -2,19 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NbThemeService } from '@nebular/theme';
-import { Usedata1Service } from '../../../services/usedata1.service';
+import { Usedata2Service } from '../../../services/usedata2.service';
 
 @Component({
   selector: 'ngxbarchart',
   templateUrl: './ngxbarchart.component.html',
   styleUrls: ['./ngxbarchart.component.scss'],
-  providers: [Usedata1Service],
+  providers: [Usedata2Service],
 })
 export class NGXBarChartComponent implements OnInit {
 
 
 
-  constructor(public service: Usedata1Service, private theme: NbThemeService) {
+  constructor(public service: Usedata2Service, private theme: NbThemeService) {
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
       const colors: any = config.variables;
       this.colorScheme = {

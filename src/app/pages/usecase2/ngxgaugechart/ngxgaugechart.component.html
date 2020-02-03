@@ -21,10 +21,13 @@
         KI Technologie: Deep Learning
       </nb-card-header>
       <nb-card-body>
+        <nb-select placeholder="Select Entry" [(selected)]="selectedItem" (selectedChange)="changeData($event)">
+          <nb-option *ngFor="let o of options" [value]="o.name">{{ o.name }}</nb-option>
+        </nb-select>
         <ngx-charts-gauge
             [view]="view"
             [scheme]="colorScheme"
-            [results]="service.single"
+            [results]="series1"
             [legend]="legend"
             [legendPosition]="legendPosition"
             [legendTitle]="legendTitle"

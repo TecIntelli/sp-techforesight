@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
-//import { multi } from '../../../../assets/data';
-import { UsedataService } from '../../../services/usedata.service';
+import { UsedataService } from '../../../services/usedata1.service';
 
 
 
@@ -33,7 +32,7 @@ export class NGXRadarComponent implements OnDestroy, OnInit {
 
   showLegend = true;
   legendPosition = 'below';
-  showXAxis: boolean = true;
+  showXAxis = true;
   showYAxis = true;
   showXAxisLabel = false;
   showYAxisLabel = false;
@@ -42,7 +41,7 @@ export class NGXRadarComponent implements OnDestroy, OnInit {
   colorScheme: any;
   themeSubscription: any;
   view: any[] = [600, 300];
-  labelTrim: boolean = false;
+  labelTrim = false;
 
 
   ngOnDestroy(): void {

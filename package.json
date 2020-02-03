@@ -55,7 +55,12 @@
     "nebular-icons": "1.1.0",
     "ng2-completer": "^3.0.3",
     "ng2-smart-table": "^1.5.0",
+<<<<<<< HEAD
     "node-sass": "^4.13.1",
+=======
+    "ngx-csv-parser": "0.0.2",
+    "node-sass": "^4.12.0",
+>>>>>>> CSV Import Works
     "normalize.css": "6.0.0",
     "pace-js": "1.0.2",
     "roboto-fontface": "0.8.0",

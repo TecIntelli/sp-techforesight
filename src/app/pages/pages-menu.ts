@@ -17,7 +17,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Datenübersicht',
-        link: '/pages/Technologydata',
+        link: '/pages/TechnologydataApplication',
       },
       {
         title: 'Radar',
@@ -34,6 +34,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'bar-chart-outline',
     children: [
       {
+        title: 'Datenübersicht',
+        link: '/pages/TechnologydataExpert',
+      },
+      {
         title: 'Grouped Bar Chart',
         link: '/pages/GroupedBarChart',
       },
@@ -46,7 +50,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Use Case 3',
     icon: 'bar-chart-outline',
-    link: '',
+    children: [
+      {
+        title: 'Datenübersicht',
+        link: '/pages/SponsorshipCatalogue',
+      },
+      {
+        title: 'Manueller CSV Datenupload',
+        link: '/pages/LoadCSV',
+      },
+      {
+        title: 'Pie Chart Grid',
+        link: '/pages/PieChartGrid',
+      },
+    ]
   },
 ];
 

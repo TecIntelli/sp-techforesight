@@ -3,12 +3,12 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { ApiObject } from '../models/technology.interface';
-@Injectable({
-  providedIn: 'root'
-})
-export class Api1Service {
 
-  api = '../../assets/data/technology-expert-format.json';
+
+@Injectable()
+export class ApiService {
+  // Dieser dieser Link kann nach Bedarf ausgestauscht werden.
+  api = '../../assets/data/technology-application-format.json';
 
   constructor(private http: HttpClient) { }
 
@@ -20,10 +20,10 @@ export class Api1Service {
     } ),
   };
 
-  // Handle API errors
+  // Handle API errors - behandelt evtl. Fehler beim Auslesen der Daten
   handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
-      // A client-side or network error occurred. Handle it accordingly.
+      // Error Message: A client-side or network error occurred. Handle it accordingly.
       console.error('An error occurred:', error.error.message);
     } else {
       // The backend returned an unsuccessful response code.
@@ -44,3 +44,5 @@ export class Api1Service {
     );
   }
 }
+
+

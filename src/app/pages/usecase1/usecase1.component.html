@@ -13,13 +13,12 @@
         </div>
       </nb-card-body>
     </nb-card>
+    <nb-card>
+      <nb-card-body>
+        <ng2-smart-table [settings]="settings" [source]="service.series1Data$ | async"> </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
   </div>
-
-  <nb-card>
-    <nb-card-body>
-      <ng2-smart-table [settings]="settings" [source]="service.series1Data$ | async"> </ng2-smart-table>
-    </nb-card-body>
-  </nb-card>
 
 
 

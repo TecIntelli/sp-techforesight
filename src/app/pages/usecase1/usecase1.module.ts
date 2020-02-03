@@ -3,8 +3,8 @@ import { NbCardModule } from '@nebular/theme';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { UseCase1Component } from './usecase1.component';
-import { ApiService } from '../../services/api.service';
-import { UsedataService } from '../../services/usedata.service';
+import { ApiService } from '../../services/api1.service';
+import { UsedataService } from '../../services/usedata1.service';
 import { NbIconModule, NbInputModule, NbTreeGridModule } from '@nebular/theme';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 

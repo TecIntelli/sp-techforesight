@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UsedataService } from '../../services/usedata.service';
+import { UsedataService } from '../../services/usedata1.service';
 import { NbSortDirection, NbSortRequest } from '@nebular/theme';
 
 @Component({
@@ -25,7 +25,8 @@ export class UseCase1Component implements OnInit {
     // darum würde ich hier mit Observables arbeiten, die ein asynchrones Arbeiten ermöglichen (siehe usedate.service.ts)
     // das erzeugte Observable kannst du dann einfach in dein HTML Template mit einer async-Pipe einbauen
     // sobald die Daten über den Service geändert werden, werden sie auch in der Lautzeit im Template automatisch aktualisiert
-    console.log(this.service.series1);
+
+    //console.log(this.service.series1);
   }
 
   data: any = this.service.series1;
@@ -34,7 +35,7 @@ export class UseCase1Component implements OnInit {
     actions: false,
     columns: {
       area: {
-        title: 'KI Technologie',
+        title: 'Technologie',
       },
       name: {
         title: 'Applikationsfelder / Branchen',
@@ -45,10 +46,13 @@ export class UseCase1Component implements OnInit {
   },
 };
 
+<<<<<<< HEAD
 
   // data: any = [{"area":"Deep Learning","name":"Cancer detection","value":3},{"area":"Deep Learning","name":"Technology Management","value":2},{"area":"Deep Learning","name":"HR","value":1},{"area":"Artificial Intelligence","name":"Cancer detection","value":2},{"area":"Artificial Intelligence","name":"Technology Management","value":3},{"area":"Artificial Intelligence","name":"HR","value":3}];
 
 
+=======
+>>>>>>> CSV Import Works
   updateSort(sortRequest: NbSortRequest): void {
     this.sortColumn = sortRequest.column;
     this.sortDirection = sortRequest.direction;

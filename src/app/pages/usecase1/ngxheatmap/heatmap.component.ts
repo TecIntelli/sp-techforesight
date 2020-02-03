@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-/* import { multi } from '../../../../assets/data'; */
-import { UsedataService } from '../../../services/usedata.service';
+import { UsedataService } from '../../../services/usedata1.service';
 
 
 @Component({

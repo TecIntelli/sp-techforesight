@@ -4,10 +4,11 @@ import { NbCardModule } from '@nebular/theme';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { UseCase2Component } from './usecase2.component';
-import { Api1Service } from '../../services/api1.service';
-import { Usedata1Service } from '../../services/usedata1.service';
+import { Api2Service } from '../../services/api2.service';
+import { Usedata2Service } from '../../services/usedata2.service';
 
-
+import { NbIconModule, NbInputModule, NbTreeGridModule } from '@nebular/theme';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 
 
@@ -19,7 +20,11 @@ import { Usedata1Service } from '../../services/usedata1.service';
     CommonModule,
     NbCardModule,
     ThemeModule,
+    NbTreeGridModule,
+    NbIconModule,
+    NbInputModule,
+    Ng2SmartTableModule,
   ],
-  providers: [Api1Service, Usedata1Service ],
+  providers: [Api2Service, Usedata2Service ],
 })
 export class Usecase2Module { }
