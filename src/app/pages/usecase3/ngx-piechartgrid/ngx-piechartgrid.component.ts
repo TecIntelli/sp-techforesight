@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Usedata3Service } from '../../../services/usedata3.service';
+import { SeriesItem } from '../../../models/datamodel';
 
 @Component({
   selector: 'ngx-piechartgrid',
@@ -12,9 +13,28 @@ export class NgxPiechartgridComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.service.parseCSV();
+    // zum Test ob die Daten aus dem Observable auslesen kann, funktioniert aber nicht
+    this.service.Data$.subscribe(data => console.log('New DATA: ' + data));
 
   }
+
+series1: Array <SeriesItem> = [];
+
+
+// hier mache ich irgendwas falsch
+/* ngxSingleFormat() {
+  this.series1 = [];
+  this.service.Data$.subscribe(data => {
+    data.forEach((item, index) => {
+      //if( item.parameter_1.value === 'Deep Learning') {
+      const seriesArr = {"name": data.FKZ, "value": data.value};
+      this.series1.push(seriesArr);
+      //}
+    });
+    //console.log(this.series1);
+
+    });
+  } */
 
 
 

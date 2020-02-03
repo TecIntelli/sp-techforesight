@@ -18,6 +18,7 @@ export class NgxGaugeChartComponent implements OnInit, OnChanges {
     // Methode aus Service muss eingelesen werden, ansonsten werden die Daten nicht geladen
     this.service.ngxInputFormat();
     this.ngxTest();
+
   }
 
   ngOnChanges() {
@@ -26,6 +27,7 @@ export class NgxGaugeChartComponent implements OnInit, OnChanges {
   }
 
 // ich schaffe es nicht das Oberservable in die Variable 'options' zu übergeben, in das HTML funktioniert es.
+// Ergebnis Werte aus ngxInputFormat() sollten hier rein
 options= [{"name":"Deep Learning","series":[{"name":"DFKI","value":374},{"name":"Fraunhofer Institut","value":285},{"name":"TUM","value":567},{"name":"RTHW Aachen","value":345}]},{"name":"Artificial Intelligence","series":[{"name":"DFKI","value":555},{"name":"Fraunhofer Institut","value":432},{"name":"TUM","value":765},{"name":"RTHW Aachen","value":988}]}];
 
 
