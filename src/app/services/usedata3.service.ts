@@ -18,7 +18,8 @@ Dieser Service konvertiert die Daten aus dem CSV in ein Array.
 private Data = new BehaviorSubject<any[]>([]);
 Data$ = this.Data.asObservable();
 
-// Frage: Ich weiß nicht wie ich diese Daten bearbeiten kann. Mit subscribe funktioniert es nicht. Ich sollte diese Daten nach dem Auslesen in eine bestimmte Form bringen
+// Frage: Ich weiß nicht wie ich diese Daten bearbeiten kann. Mit subscribe funktioniert es nicht.
+//Ich sollte diese Daten nach dem Auslesen in eine bestimmte Form bringen
   parseCSV() {
     let csvData = '../../../assets/data/Förderkatalog_2019.09.22.csv';
     let options = {

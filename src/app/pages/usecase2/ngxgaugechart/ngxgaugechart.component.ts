@@ -25,11 +25,11 @@ export class NgxGaugeChartComponent implements OnInit, OnChanges {
     this.ngxTest();
   }
 
-// ich schaffe es nicht das Oberservable in die Variable 'options' zu übergeben, in das HTML funktioniert es
+// ich schaffe es nicht das Oberservable in die Variable 'options' zu übergeben, in das HTML funktioniert es.
 options= [{"name":"Deep Learning","series":[{"name":"DFKI","value":374},{"name":"Fraunhofer Institut","value":285},{"name":"TUM","value":567},{"name":"RTHW Aachen","value":345}]},{"name":"Artificial Intelligence","series":[{"name":"DFKI","value":555},{"name":"Fraunhofer Institut","value":432},{"name":"TUM","value":765},{"name":"RTHW Aachen","value":988}]}];
 
 
-// Mein Chart reagiert nicht auf die Änderungen --> Im LifeCycle habe ich extra ngOnChanges hinzugefügt
+// Mein Chart reagiert nicht auf die Änderungen --> Im LifeCycle habe ich extra ngOnChanges hinzugefügt.
 selectedItem = this.options[0].name;
 changeData(event){
   console.log(this.selectedItem);
