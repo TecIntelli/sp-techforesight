@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { Component, NgModule, OnInit } from '@angular/core';
-=======
 import { Component, NgModule,OnInit, OnChanges } from '@angular/core';
->>>>>>> Fragen zu Charts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { Usedata2Service } from '../../../services/usedata2.service';
