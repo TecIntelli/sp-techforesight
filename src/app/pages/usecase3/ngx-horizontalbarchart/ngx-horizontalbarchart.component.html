@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>
+        Use Case 3
+      </nb-card-header>
+      <nb-card-body>
+        <h5 class="grid-h">Förderdatenbank vom Bund</h5>
+        <br>
+        <div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+    <nb-card>
+      <nb-card-body>
+        <ngx-charts-bar-horizontal
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="service.Data2$ | async"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [barPadding]="barPadding"
+            >
+          </ngx-charts-bar-horizontal>
+      </nb-card-body>
+    </nb-card>
+  </div>

@@ -40,13 +40,4 @@ export class NGXHeatmapComponent implements OnInit {
   trimXAxisTicks = false;
   trimYAxisTicks = false;
 
-
-  /* constructor() {
-    Object.assign(this, {multi})
-  }
-
-  onSelect(event) {
-    console.log(event);
-  }
- */
 }

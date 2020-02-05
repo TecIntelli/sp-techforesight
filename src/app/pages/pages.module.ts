@@ -12,7 +12,7 @@ import { Usecase2Module } from './usecase2/usecase2.module';
 import { NgxbarchartModule } from './usecase2/ngxbarchart/ngxbarchart.module';
 import { NgxGaugeChartModule } from './usecase2/ngxgaugechart/ngxgaugechart.module';
 import { Usecase3Module } from './usecase3/usecase3.module';
-import { NgxPiechartgridModule } from './usecase3/ngx-piechartgrid/ngx-piechartgrid.module';
+import { NgxHorizontalBarChartModule } from './usecase3/ngx-horizontalbarchart/ngx-horizontalbarchart.module';
 
 @NgModule({
   imports: [
@@ -27,7 +27,7 @@ import { NgxPiechartgridModule } from './usecase3/ngx-piechartgrid/ngx-piechartg
     Usecase3Module,
     NgxbarchartModule,
     NgxGaugeChartModule,
-    NgxPiechartgridModule,
+    NgxHorizontalBarChartModule,
   ],
   declarations: [
     PagesComponent,

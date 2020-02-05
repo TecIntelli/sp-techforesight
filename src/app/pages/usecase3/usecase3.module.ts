@@ -11,7 +11,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { LoadDataComponent } from './load-data/load-data.component';
-import { NgxPiechartgridComponent } from './ngx-piechartgrid/ngx-piechartgrid.component';
+import { NgxHorizontalBarChartComponent } from './ngx-horizontalbarchart/ngx-horizontalbarchart.component';
 
 
 
@@ -19,7 +19,7 @@ import { NgxPiechartgridComponent } from './ngx-piechartgrid/ngx-piechartgrid.co
   declarations: [
     UseCase3Component,
     LoadDataComponent,
-    NgxPiechartgridComponent,
+    NgxHorizontalBarChartComponent,
   ],
   imports: [
     CommonModule,

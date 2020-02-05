@@ -23,8 +23,7 @@ export class UseCase2Component implements OnInit {
     this.service.ngxSingle1InputFormat();
   }
 
-  //data: any = this.service.series1;
-
+  // <-------------Datentabelle------------>
   settings = {
     actions: false,
     columns: {

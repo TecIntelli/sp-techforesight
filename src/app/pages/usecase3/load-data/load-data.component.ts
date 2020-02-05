@@ -25,8 +25,7 @@ export class LoadDataComponent implements OnInit {
 
  @ViewChild('fileImportInput', { static: false }) fileImportInput: any;
 
- // Your applications input change listener for the CSV File
- // Funktion zum Lesen des Files
+ // Funktion zum Lesen des CSV-Files mit Hilfe des change listeners
  fileChangeListener($event: any): void {
 
    // Select the files from the event
@@ -39,7 +38,7 @@ export class LoadDataComponent implements OnInit {
      this.fileImportInput.nativeElement.value = '';
    }
 
-   // Parse the file you want to select for the operation along with the configuration
+   // Parsen des ausgewählten Files mit den gewählten Optionen
    this.ngxCsvParser.parse(files[0], { header: this.header, delimiter: this.delimiter })
      .pipe().subscribe((result: Array<any>) => {
 
@@ -53,9 +52,6 @@ export class LoadDataComponent implements OnInit {
 
 
 /* -------------Datentabelle------------------------------ */
-
-
-
 sortColumn: string;
 sortDirection: NbSortDirection = NbSortDirection.NONE;
 

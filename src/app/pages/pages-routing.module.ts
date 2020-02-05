@@ -11,7 +11,7 @@ import { NGXHeatmapComponent } from './usecase1/ngxheatmap/heatmap.component';
 import { NGXBarChartComponent } from './usecase2/ngxbarchart/ngxbarchart.component';
 import { NgxGaugeChartComponent } from './usecase2/ngxgaugechart/ngxgaugechart.component';
 import { LoadDataComponent } from './usecase3/load-data/load-data.component';
-import { NgxPiechartgridComponent  } from './usecase3/ngx-piechartgrid/ngx-piechartgrid.component';
+import { NgxHorizontalBarChartComponent } from './usecase3/ngx-horizontalbarchart/ngx-horizontalbarchart.component';
 
 const routes: Routes = [{
   path: '',
@@ -59,8 +59,8 @@ const routes: Routes = [{
       component: LoadDataComponent,
     },
     {
-      path: 'PieChartGrid',
-      component: NgxPiechartgridComponent,
+      path: 'HorizontalBarChart',
+      component: NgxHorizontalBarChartComponent,
     },
   ],
 }];

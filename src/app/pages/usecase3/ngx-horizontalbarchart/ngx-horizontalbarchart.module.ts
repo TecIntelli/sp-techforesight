@@ -11,4 +11,4 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     NgxChartsModule,
   ]
 })
-export class NgxPiechartgridModule { }
+export class NgxHorizontalBarChartModule { }

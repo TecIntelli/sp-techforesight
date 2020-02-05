@@ -60,8 +60,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/LoadCSV',
       },
       {
-        title: 'Pie Chart Grid',
-        link: '/pages/PieChartGrid',
+        title: 'Horizontal Bar Chart',
+        link: '/pages/HorizontalBarChart',
       },
     ]
   },

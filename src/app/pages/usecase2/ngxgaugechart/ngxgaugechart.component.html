@@ -21,8 +21,9 @@
         KI Technologie: Deep Learning
       </nb-card-header>
       <nb-card-body>
+        <p>Bitte wähle zuerst eine Option aus:</p>
         <nb-select placeholder="Select Entry" [(selected)]="selectedItem" (selectedChange)="changeData($event)">
-          <nb-option *ngFor="let o of options" [value]="o.name">{{ o.name }}</nb-option>
+          <nb-option *ngFor="let o of service.series2Data$ | async" [value]="o.name">{{ o.name }}</nb-option>
         </nb-select>
         <ngx-charts-gauge
             [view]="view"
