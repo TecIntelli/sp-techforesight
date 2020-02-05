@@ -1,3 +1,5 @@
+// Datenmodell für das Bubble Chart
+
 export class SeriesItem {
   name: string;
   x: string;

@@ -10,6 +10,7 @@ import { Api2Service } from '../../../services/api2.service';
   templateUrl: './ngxgaugechart.component.html',
   styleUrls: ['./ngxgaugechart.component.scss'],
 })
+
 export class NgxGaugeChartComponent implements OnInit {
 
   constructor(public service: Usedata2Service, public api: Api2Service) { }
@@ -19,18 +20,20 @@ export class NgxGaugeChartComponent implements OnInit {
     this.service.ngxInputFormat();
   }
 
-// Gauge Chart
+
 series1: any;
 selectedItem;
 
-// Je nach Option in diesem Beispiel die Kompetenzträger, wird das Chart angepasst
+// Je nach Wahl einer Option aus dem Select im HTML (in diesem Beispiel die Kompetenzträger), werden die Daten im Gauge Chart angepasst
 changeData(event) {
   // console.log(this.selectedItem);
    this.selectedItem = event;
    const series: Array <SeriesItem> = [];
     this.api.getData().subscribe(data => {
       data.elements.forEach((item, index) => {
+        // reagiert auf die Auswahl über das Select in der Oberfläche
         if ( item.parameter_1.value === this.selectedItem) {
+        // setzt die Daten im gewünschten Input Format zusammen
         const seriesArr = {'area': item.parameter_1.value, 'name': item.parameter_2.value, 'value': item.parameter_3.value};
         series.push(seriesArr);
         }
@@ -40,8 +43,8 @@ changeData(event) {
       });
 }
 
-// Gauge Chart Optionen
-  view: any[] = [800, 400];
+// Optionen zur Konfiguration des Gauge Charts
+  view: any[] = [900, 300];
   legend: boolean = true;
   legendPosition: string = 'below';
   legendTitle: string = 'Kompetenzträger';

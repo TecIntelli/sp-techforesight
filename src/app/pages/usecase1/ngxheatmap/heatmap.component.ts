@@ -25,7 +25,7 @@ export class NGXHeatmapComponent implements OnInit {
 
   view: any[] = [600, 400];
 
-  // options
+  // Optionen zur Konfiguration des Heatmap
   showXAxis = true;
   showYAxis = true;
   gradient = true;

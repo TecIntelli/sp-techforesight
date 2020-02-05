@@ -7,8 +7,8 @@ import { NbThemeService } from '@nebular/theme';
   templateUrl: './ngx-horizontalbarchart.component.html',
   styleUrls: ['./ngx-horizontalbarchart.component.scss'],
 })
-export class NgxHorizontalBarChartComponent implements OnInit {
 
+export class NgxHorizontalBarChartComponent implements OnInit {
 
   constructor(public service: Usedata3Service, private theme: NbThemeService) {
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
@@ -19,15 +19,12 @@ export class NgxHorizontalBarChartComponent implements OnInit {
     });
   }
 
-
   ngOnInit() {
     this.service.parseCSV();
   }
 
-
+  // Optionen zur Konfiguration des Horizontal Bar Charts
   view: any[] = [700, 600];
-
-  // Optionen
   showXAxis: boolean = true;
   showYAxis: boolean = true;
   gradient: boolean = false;

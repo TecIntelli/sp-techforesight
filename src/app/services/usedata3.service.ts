@@ -3,12 +3,10 @@ import { Papa } from 'ngx-papaparse';
 import {BehaviorSubject, Observable} from 'rxjs';
 import { MultiItem, SeriesItem } from '../models/datamodel';
 
-
-
-
 @Injectable({
   providedIn: 'root',
 })
+
 export class Usedata3Service {
 
 /* -------------CSV Parser------------------------------
@@ -88,7 +86,7 @@ DataForHorizontalBarChart$ = this.DataForHorizontalBarChart.asObservable();
           const multi = new MultiItem(results.data[i].Land, seriesArr);
           apiData.push(multi);
           }
-          this.result = [... new Set(apiData.map(x => x.name))].map( x => ({ "name": x, "series": []}));
+          this.result = [... new Set(apiData.map(x => x.name))].map( x => ({ 'name': x, 'series': []}));
           apiData.forEach(x => this.result.find( y => y.name === x.name).series.push(x.series));
           this.DataforBubbleChart.next(this.result);
         },

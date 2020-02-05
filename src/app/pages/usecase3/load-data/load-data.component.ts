@@ -21,33 +21,34 @@ export class LoadDataComponent implements OnInit {
   ngOnInit() {
   }
 
- /* -------------manueller CSV-Daten-Upload------------------------------ */
+ /* -------------manueller CSV-Daten-Upload------------------------------
+  Komponente dient dem manuellen Upload von CSV-Files und soll als Beispiel einer solchen Variante dienen
+ */
 
  @ViewChild('fileImportInput', { static: false }) fileImportInput: any;
 
- // Funktion zum Lesen des CSV-Files mit Hilfe des change listeners
+ // Funktion zum Lesen der CSV-Datei mit Hilfe des 'change listeners'
  fileChangeListener($event: any): void {
 
-   // Select the files from the event
+   // Auswählen der Detai aus dem Event
    const files = $event.srcElement.files;
 
-   // Prüfung ob eine .csv Datei hochgeladen wurde
+   // Prüfung ob eine Datei mit Ende .csv hochgeladen wurde, ansonsten wird eine Fehlermeldung ausgegeben
    if (files[0].name.endsWith('.csv')) {
    }else{
-     alert('Please import valid .csv file.');
+     alert('Bitte laden Sie eine gültige .csv-Datei hoch.');
      this.fileImportInput.nativeElement.value = '';
    }
 
-   // Parsen des ausgewählten Files mit den gewählten Optionen
+   // Parsen der ausgewählten Datei mit den gewählten Optionen
+   // Optionen können mittels Select oder Eingabe angepasst werden
    this.ngxCsvParser.parse(files[0], { header: this.header, delimiter: this.delimiter })
      .pipe().subscribe((result: Array<any>) => {
-
        console.log('Result', result);
        this.csvRecords = result;
      }, (error: NgxCSVParserError) => {
        console.log('Error', error);
      });
-
  }
 
 
@@ -119,6 +120,5 @@ sortDirection: NbSortDirection = NbSortDirection.NONE;
    const nextColumnStep = 100;
    return minWithForMultipleColumns + (nextColumnStep * index);
  }
-
 
 }

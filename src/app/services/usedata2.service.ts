@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Api2Service } from './api2.service';
 import { MultiItem, SeriesItem } from '../models/datamodel';
-import {BehaviorSubject, Observable} from "rxjs";
+import {BehaviorSubject, Observable} from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class Usedata2Service {
 
@@ -25,24 +25,24 @@ ngxInputFormat() {
   this.config.getData().subscribe(data => {
     data.elements.forEach((item, index) => {
         const series: Array <SeriesItem> = [];
-        const seriesArr = {"name": item.parameter_2.value,"value":item.parameter_3.value};
+        const seriesArr = {'name': item.parameter_2.value, 'value': item.parameter_3.value};
           series.push(seriesArr);
         const multi = new MultiItem(item.parameter_1.value, seriesArr);
         this.apiData.push(multi);
         });
 
-        this.result = [... new Set(this.apiData.map(x => x.name))].map( x => ({ "name": x, "series": []}));
+        this.result = [... new Set(this.apiData.map(x => x.name))].map( x => ({ 'name': x, 'series': []}));
         this.apiData.forEach(x => this.result.find( y => y.name === x.name).series.push(x.series));
 
-        //Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
-        //Ergbnis liegt als Array mit Objects vor
+        // Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
+        // Ergbnis liegt als Array mit Objects vor
         console.log(this.result);
 
         this.series2Data.next(this.result);
       });
 
-      //Console log nur zur Überprüfung der Konvertierung, ob Teilergebnis korrekt vorliegt
-      //Ergebins ist ein Array
+      // Console log nur zur Überprüfung der Konvertierung, ob Teilergebnis korrekt vorliegt
+      // Ergebins ist ein Array
       // console.log(this.apiData);
 
 }
@@ -105,12 +105,10 @@ ngxSingle1InputFormat() {
   this.series1 = [];
   this.config.getData().subscribe(data => {
     data.elements.forEach((item, index) => {
-      //if( item.parameter_1.value === 'Deep Learning') {
-      const seriesArr = {"area": item.parameter_1.value, "name": item.parameter_2.value,"value":item.parameter_3.value};
+      const seriesArr = {'area': item.parameter_1.value, 'name': item.parameter_2.value, 'value': item.parameter_3.value};
       this.series1.push(seriesArr);
-      //}
     });
-    //console.log(this.series1);
+    // console.log(this.series1);
 
     this.series1Data.next(this.series1);
     });

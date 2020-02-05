@@ -20,23 +20,25 @@ export class ApiService {
     } ),
   };
 
-  // Handle API errors - behandelt evtl. Fehler beim Auslesen der Daten
+  // Umgang bei Fehler im Auslesen der API - behandelt evtl. Fehler beim Auslesen der Daten
   handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // Error Message: A client-side or network error occurred. Handle it accordingly.
       console.error('An error occurred:', error.error.message);
     } else {
-      // The backend returned an unsuccessful response code.
-      // The response body may contain clues as to what went wrong,
+      // Das Backend gibt einen Error Code zurück.
+      // Der 'response body' enthält ggf. Hinweise zum Fehler.
       console.error(
         `Backend returned code ${error.status}, ` +
         `body was: ${error.error}`);
     }
-    // return an observable with a user-facing error message
+    // Obervable mit Fehlermeldung
     return throwError(
       'The API doesn´t work, please try again later.');
   }
 
+  // Funktion zum Abruft der Daten aus dem API, der Rückgabewert ist ein Observable
+  // nach 3 Versuchen wir ein Error geworfen
   getData(): Observable<ApiObject> {
     return this.http.get<ApiObject>(this.api, this.httpOptions).pipe(
       retry(3),

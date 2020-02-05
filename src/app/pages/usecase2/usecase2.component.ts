@@ -17,8 +17,6 @@ export class UseCase2Component implements OnInit {
   constructor(public service: Usedata2Service) {
   }
 
-
-
   ngOnInit() {
     this.service.ngxSingle1InputFormat();
   }
@@ -50,8 +48,6 @@ export class UseCase2Component implements OnInit {
     }
     return NbSortDirection.NONE;
   }
-
-
 
   getShowOn(index: number) {
     const minWithForMultipleColumns = 400;

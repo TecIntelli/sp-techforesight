@@ -72,7 +72,7 @@ wandelt sie in das für ngx benötigte Input Format um */
               ]
             */
             const series: Array <SeriesItem> = [];
-            const seriesArr = {"name": item.parameter_2.value,"value":item.parameter_3.value};
+            const seriesArr = {'name': item.parameter_2.value, 'value': item.parameter_3.value};
               series.push(seriesArr);
             const multi = new MultiItem(item.parameter_1.value, seriesArr);
             this.apiData.push(multi);
@@ -86,7 +86,7 @@ wandelt sie in das für ngx benötigte Input Format um */
 
             - in 'result' wird Array mti eindeutigem Namen und leerem 'series Array' erstellt
             */
-            this.result = [... new Set(this.apiData.map(x => x.name))].map( x => ({ "name": x, "series": []}));
+            this.result = [... new Set(this.apiData.map(x => x.name))].map( x => ({ 'name': x, 'series': []}));
             /*
             - jedes 'apiData' - Objekt wird in Series Array eingelesen
             - um richtige Serienobjekt der apiData in das richtige 'result' Series Array einzulesen,
@@ -94,12 +94,12 @@ wandelt sie in das für ngx benötigte Input Format um */
             */
             this.apiData.forEach(x => this.result.find( y => y.name === x.name).series.push(x.series));
 
-            //Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
-            //console.log(this.result);
+            // Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
+            // console.log(this.result);
           });
 
-          //Console log nur zur Überprüfung der Konvertierung, ob Teilergebnis korrekt vorliegt
-           //console.log(this.apiData);
+          // Console log nur zur Überprüfung der Konvertierung, ob Teilergebnis korrekt vorliegt
+          // console.log(this.apiData);
 
     }
 
@@ -126,11 +126,11 @@ wandelt sie in das für ngx benötigte Input Format um */
     this.series1 = [];
     this.config.getData().subscribe(data => {
       data.elements.forEach((item, index) => {
-        const seriesArr = {"area": item.parameter_1.value, "name": item.parameter_2.value,"value":item.parameter_3.value};
+        const seriesArr = {'area': item.parameter_1.value, 'name': item.parameter_2.value, 'value': item.parameter_3.value};
         this.series1.push(seriesArr);
         // this.series1.map(x=>this.series1);
       });
-      //console.log('Usedata.Service: ' + this.series1);
+      // console.log('Usedata.Service: ' + this.series1);
       // nachdem alle Daten im Array gespeichert sind, wird diese Array-Instanz als neuer Wert für das Observable gesetzt
       this.series1Data.next(this.series1);
     });

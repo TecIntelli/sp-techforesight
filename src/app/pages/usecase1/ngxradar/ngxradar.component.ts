@@ -13,7 +13,6 @@ import { UsedataService } from '../../../services/usedata1.service';
 })
 
 export class NGXRadarComponent implements OnDestroy, OnInit {
-  // multi: any[];
 
   constructor(public service: UsedataService, private theme: NbThemeService) {
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
@@ -29,7 +28,7 @@ export class NGXRadarComponent implements OnDestroy, OnInit {
     this.service.ngxInputFormat();
     }
 
-
+// Optionen zur Konfiguration des Radar Charts
   showLegend = true;
   legendPosition = 'below';
   showXAxis = true;

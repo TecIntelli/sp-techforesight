@@ -10,9 +10,8 @@ import { Usedata2Service } from '../../../services/usedata2.service';
   styleUrls: ['./ngxbarchart.component.scss'],
   providers: [Usedata2Service],
 })
+
 export class NGXBarChartComponent implements OnInit {
-
-
 
   constructor(public service: Usedata2Service, private theme: NbThemeService) {
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
@@ -28,7 +27,7 @@ export class NGXBarChartComponent implements OnInit {
   this.service.ngxInputFormat();
   }
 
-  // options
+  // Optionen zur Konfiguration des Bar Charts
   view: any[] = [900, 400];
   showXAxis: boolean = true;
   showYAxis: boolean = true;
@@ -40,7 +39,6 @@ export class NGXBarChartComponent implements OnInit {
   yAxisLabel: string = 'Häufigkeit der Nennungen in Veröffentlichungen';
   legendTitle: string = 'Kompetenzträger / Organisation';
   legendPosition: string = 'below';
-
   colorScheme: any;
   themeSubscription: any;
 
