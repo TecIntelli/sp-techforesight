@@ -12,6 +12,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { LoadDataComponent } from './load-data/load-data.component';
 import { NgxHorizontalBarChartComponent } from './ngx-horizontalbarchart/ngx-horizontalbarchart.component';
+import { NgxBubbleChartComponent } from './ngx-bubblechart/ngx-bubblechart.component';
 
 
 
@@ -20,6 +21,7 @@ import { NgxHorizontalBarChartComponent } from './ngx-horizontalbarchart/ngx-hor
     UseCase3Component,
     LoadDataComponent,
     NgxHorizontalBarChartComponent,
+    NgxBubbleChartComponent,
   ],
   imports: [
     CommonModule,

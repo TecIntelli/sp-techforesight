@@ -12,6 +12,7 @@ import { NGXBarChartComponent } from './usecase2/ngxbarchart/ngxbarchart.compone
 import { NgxGaugeChartComponent } from './usecase2/ngxgaugechart/ngxgaugechart.component';
 import { LoadDataComponent } from './usecase3/load-data/load-data.component';
 import { NgxHorizontalBarChartComponent } from './usecase3/ngx-horizontalbarchart/ngx-horizontalbarchart.component';
+import { NgxBubbleChartComponent } from './usecase3/ngx-bubblechart/ngx-bubblechart.component';
 
 const routes: Routes = [{
   path: '',
@@ -61,6 +62,10 @@ const routes: Routes = [{
     {
       path: 'HorizontalBarChart',
       component: NgxHorizontalBarChartComponent,
+    },
+    {
+      path: 'BubbleChart',
+      component: NgxBubbleChartComponent,
     },
   ],
 }];

@@ -63,6 +63,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Horizontal Bar Chart',
         link: '/pages/HorizontalBarChart',
       },
+      {
+        title: 'Bubble Chart',
+        link: '/pages/BubbleChart',
+      },
     ]
   },
 ];

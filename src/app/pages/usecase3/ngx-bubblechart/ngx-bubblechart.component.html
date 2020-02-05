@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>
+        Use Case 1
+      </nb-card-header>
+      <nb-card-body>
+
+        <h5 class="grid-h">KI Technologie/-ansätze</h5>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>Radar Chart</nb-card-header>
+      <nb-card-body>
+        <p>Bitte wähle zuerst eine Option aus:</p>
+        <nb-select fullWidth=true placeholder="Select Entry" [(selected)]="selectedItem" (selectedChange)="parseCSV($event)">
+          <nb-option [value]="null">Auswahl löschen</nb-option>
+          <nb-option *ngFor="let o of service.DataforBubbleChart$ | async" [value]="o.name">{{ o.name }}</nb-option>
+        </nb-select>
+        <ngx-charts-bubble-chart
+          [view]="view"
+          [scheme]="colorScheme"
+          [results]="this.result"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [legend]="showLegend"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel"
+          [xScaleMin]="xScaleMin"
+          [xScaleMax]="xScaleMax"
+          [yScaleMin]="yScaleMin"
+          [yScaleMax]="yScaleMax"
+          [minRadius]="minRadius"
+          [maxRadius]="maxRadius">
+        </ngx-charts-bubble-chart>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
