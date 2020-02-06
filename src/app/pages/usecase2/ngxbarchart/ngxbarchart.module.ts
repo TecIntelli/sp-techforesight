@@ -5,7 +5,6 @@ import { NbCardModule } from '@nebular/theme';
 import { ThemeModule } from '../../../@theme/theme.module';
 import { NGXBarChartComponent } from './ngxbarchart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { Api2Service } from '../../../services/api2.service';
 
 
 
@@ -20,6 +19,5 @@ import { Api2Service } from '../../../services/api2.service';
   declarations: [
     NGXBarChartComponent,
   ],
-  providers:    [ Api2Service ]
 })
 export class NgxbarchartModule { }

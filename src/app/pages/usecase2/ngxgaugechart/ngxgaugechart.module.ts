@@ -6,7 +6,6 @@ import { NbCardModule, NbButtonModule, NbInputModule, NbSelectModule, } from '@n
 import { ThemeModule } from '../../../@theme/theme.module';
 import { NgxGaugeChartComponent } from './ngxgaugechart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { Api2Service } from '../../../services/api2.service';
 import { FormsModule } from '@angular/forms';
 
 
@@ -27,6 +26,5 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     NgxGaugeChartComponent,
   ],
-  providers:    [ Api2Service ],
 })
 export class NgxGaugeChartModule { }
