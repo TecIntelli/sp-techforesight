@@ -9,6 +9,7 @@ import { Api2Service } from '../../../services/api2.service';
   selector: 'ngx-gaugechart',
   templateUrl: './ngxgaugechart.component.html',
   styleUrls: ['./ngxgaugechart.component.scss'],
+  providers: [Usedata2Service, Api2Service],
 })
 
 export class NgxGaugeChartComponent implements OnInit {

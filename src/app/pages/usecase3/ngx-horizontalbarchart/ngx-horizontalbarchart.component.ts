@@ -6,6 +6,7 @@ import { NbThemeService } from '@nebular/theme';
   selector: 'ngx-barchartgrid',
   templateUrl: './ngx-horizontalbarchart.component.html',
   styleUrls: ['./ngx-horizontalbarchart.component.scss'],
+  providers: [Usedata3Service],
 })
 
 export class NgxHorizontalBarChartComponent implements OnInit {

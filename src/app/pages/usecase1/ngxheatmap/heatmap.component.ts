@@ -9,9 +9,6 @@ import { UsedataService } from '../../../services/usedata1.service';
   providers: [UsedataService],
 })
 export class NGXHeatmapComponent implements OnInit {
-  //single: any[];
-  //multi: any[];
-
 
   constructor( public service: UsedataService ) { }
 
