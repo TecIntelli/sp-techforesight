@@ -26,10 +26,10 @@ DataForHorizontalBarChart$ = this.DataForHorizontalBarChart.asObservable();
     const csvData = '../../../assets/data/Förderkatalog_2019.09.22.csv'; // Link to CSV File
     const options = {
       // Add your options here
-      download: true,
-      delimiter: ';',
-      header: true,
-      skipEmptyLines: true,
+      download: true, // Download das CSV von einer URL möglich --> Streaming von lokalen und remote Files
+      delimiter: ';', // individueller Delimiter setzen
+      header: true, // erste Datenzeile wird als Header übernommen
+      skipEmptyLines: true, // Leerzeilen werden übersprungen
       dynamicTyping: true, // Konvertiert die Daten automatisch, jedoch kommt es zu Probleme bei 'null' aus diesem Grund erfolgt weiter unter die gezwungene Konvertierung in ein String
 
       complete: (results, file) => {

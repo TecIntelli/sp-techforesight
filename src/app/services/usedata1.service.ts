@@ -18,48 +18,7 @@ wandelt sie in das für ngx benötigte Input Format um */
     this.apiData = [];
   }
 
-  /* getAllAPIData() {
-    this.config.getData().subscribe(data => {console.log(data); } );
-  }
-
-  getAPIData() {
-      // liest aus Array "elements" alle Objekte aus
-      this.config.getData().subscribe(result => {
-        this.technologydatas = result.elements;
-        console.log(this.technologydatas);
-      });
-  } */
-
-  /* transformToJSON() {
-    this.config.getData()
-      .subscribe(data => {
-          data.elements.forEach((item, index) => {
-            const mItem = this.apiData.find( param1 => param1.name === item.parameter_1.value);
-            if (mItem) {
-              const sItem = mItem.series.find(param2 => param2.name === item.parameter_2.value);
-              if (!sItem) {
-                mItem.series.push({
-                  name: item.parameter_2.value,
-                  value: item.parameter_3.value,
-                });
-              }
-            } else {
-              this.apiData.push({
-                name: item.parameter_1.value,
-                series: [{
-                  name: item.parameter_2.value,
-                  value: item.parameter_3.value,
-                }],
-              });
-            }
-          } );
-          // Console log nur zur Überprüfung der Konvertierung
-          // console.log(JSON.stringify(this.apiData));
-      });
-
-      //console.log(this.apiData);
-    } */
-
+    // Funktion zur Speicherung der Daten im Multi series Format
     ngxInputFormat() {
       this.config.getData().subscribe(data => {
         data.elements.forEach((item, index) => {
@@ -107,10 +66,11 @@ wandelt sie in das für ngx benötigte Input Format um */
   series1: Array <SeriesItem> = [];
   arr: any;
 
-  // die Daten werden als Observable abgelegt, um später stets auf den aktuellen Inhalt zugreifen zu können
+  // die Daten werden als Observable abgelegt, um später stets auf den aktuellen Inhalt zugreifen zu können (asynchron)
   private series1Data = new BehaviorSubject<SeriesItem[]>([]);
   series1Data$ = this.series1Data.asObservable();
 
+  // Funktion zur Speicherung der Daten im Singles Series Format
   ngxSingleInputFormat() {
     /*
     Daten werden wie folgt ausgegeben:

@@ -6,7 +6,7 @@ import { Papa } from 'ngx-papaparse';
 import { MultiItem, SeriesItem } from '../../../models/datamodelbubblechart';
 
 @Component({
-  selector: 'ngx-radarchart',
+  selector: 'ngx-bubblechart',
   templateUrl: './ngx-bubblechart.component.html',
   styleUrls: ['./ngx-bubblechart.component.scss'],
   providers: [Usedata3Service],

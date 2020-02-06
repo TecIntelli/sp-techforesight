@@ -10,8 +10,8 @@ import { NbSortDirection, NbSortRequest } from '@nebular/theme';
 })
 export class LoadDataComponent implements OnInit {
 
+  // Optionen zum Parsen der CSV-Datei
   csvRecords: any[] = [];
-  csvRecords1: any;
   header = true;
   delimiter = '';
 

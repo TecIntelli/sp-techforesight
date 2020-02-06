@@ -53,10 +53,24 @@ changeData(event) {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5'],
   };
 
-  /* onSelect(data): void {
-    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
-  }
+  onSelect(event): void {
 
+    this.selectedItem = event;
+   const series: Array <SeriesItem> = [];
+    this.api.getData().subscribe(data => {
+      data.elements.forEach((item, index) => {
+        // reagiert auf die Auswahl über das Select in der Oberfläche
+        if ( item.parameter_1.value === this.selectedItem) {
+        // setzt die Daten im gewünschten Input Format zusammen
+        const seriesArr = {'area': item.parameter_1.value, 'name': item.parameter_2.value, 'value': item.parameter_3.value};
+        series.push(seriesArr);
+        }
+      });
+      this.series1 = series;
+      // console.log(series);
+      });
+  }
+ /*
   onActivate(data): void {
     console.log('Activate', JSON.parse(JSON.stringify(data)));
   }

@@ -34,17 +34,8 @@ ngxInputFormat() {
         this.result = [... new Set(this.apiData.map(x => x.name))].map( x => ({ 'name': x, 'series': []}));
         this.apiData.forEach(x => this.result.find( y => y.name === x.name).series.push(x.series));
 
-        // Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
-        // Ergbnis liegt als Array mit Objects vor
-        console.log(this.result);
-
         this.series2Data.next(this.result);
       });
-
-      // Console log nur zur Überprüfung der Konvertierung, ob Teilergebnis korrekt vorliegt
-      // Ergebins ist ein Array
-      // console.log(this.apiData);
-
 }
 
 /*

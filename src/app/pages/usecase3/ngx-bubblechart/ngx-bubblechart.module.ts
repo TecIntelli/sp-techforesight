@@ -12,4 +12,4 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     NgxChartsModule,
   ]
 })
-export class NgxRadarchartModule { }
+export class NgxBubbleChartModule { }
