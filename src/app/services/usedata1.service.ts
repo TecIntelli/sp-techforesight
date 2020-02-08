@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api1.service';
 import { MultiItem, SeriesItem } from '../models/datamodel';
-import {BehaviorSubject} from "rxjs";
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -17,6 +17,9 @@ wandelt sie in das für ngx benötigte Input Format um */
   constructor(private config: ApiService) {
     this.apiData = [];
   }
+
+private seriesData = new BehaviorSubject<any[]>([]);
+seriesData$ = this.seriesData.asObservable();
 
     // Funktion zur Speicherung der Daten im Multi series Format
     ngxInputFormat() {
@@ -35,6 +38,8 @@ wandelt sie in das für ngx benötigte Input Format um */
               series.push(seriesArr);
             const multi = new MultiItem(item.parameter_1.value, seriesArr);
             this.apiData.push(multi);
+
+            this.seriesData.next(this.result);
             });
             /*
             - wandelt die Daten in das MultiSeries Format um (series: key/value)
@@ -55,6 +60,7 @@ wandelt sie in das für ngx benötigte Input Format um */
 
             // Console log nur zur Überprüfung der Konvertierung, ob die Daten im ngx Format vorliegen
             // console.log(this.result);
+            this.seriesData.next(this.result);
           });
 
           // Console log nur zur Überprüfung der Konvertierung, ob Teilergebnis korrekt vorliegt

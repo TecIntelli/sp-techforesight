@@ -22,7 +22,7 @@
         <ngx-charts-bar-vertical-2d
           [view]="view"
           [scheme]="colorScheme"
-          [results]="service.result"
+          [results]="service.series2Data$ | async"
           [gradient]="gradient"
           [xAxis]="showXAxis"
           [yAxis]="showYAxis"
@@ -32,10 +32,10 @@
           [xAxisLabel]="xAxisLabel"
           [yAxisLabel]="yAxisLabel"
           [legendTitle]="legendTitle"
-          [legendPosition]="legendPosition"
-          (select)="onSelect($event)"
+          [legendPosition]="legendPosition">
+         <!--  (select)="onSelect($event)"
           (activate)="onActivate($event)"
-          (deactivate)="onDeactivate($event)">
+          (deactivate)="onDeactivate($event)" -->
         </ngx-charts-bar-vertical-2d>
       </nb-card-body>
     </nb-card>

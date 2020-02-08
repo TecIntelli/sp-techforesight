@@ -23,7 +23,7 @@
         <ngx-charts-polar-chart
           [view]="view"
           [scheme]="colorScheme"
-          [results]="service.result"
+          [results]="service.seriesData$ | async"
           [xAxis]="showXAxis"
           [yAxis]="showYAxis"
           [legend]="showLegend"

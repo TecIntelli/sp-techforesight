@@ -22,7 +22,7 @@
         <ngx-charts-heat-map
           [view]="view"
           [scheme]="colorScheme"
-          [results]="service.result"
+          [results]="service.seriesData$ | async"
           [legend]="showLegend"
           [gradient]="gradient"
           [xAxis]="showXAxis"
@@ -32,8 +32,8 @@
           [xAxisLabel]="xAxisLabel"
           [yAxisLabel]="yAxisLabel"
           [trimXAxisTicks] = "trimXAxisTicks"
-          [trimYAxisTicks] = "trimYAxisTicks"
-          (select)="onSelect($event)">
+          [trimYAxisTicks] = "trimYAxisTicks">
+          <!-- (select)="onSelect($event)" -->
         </ngx-charts-heat-map>
       </nb-card-body>
     </nb-card>
