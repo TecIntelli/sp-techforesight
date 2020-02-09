@@ -8,10 +8,10 @@ Dashboard: ngx-admin [ngx-admin starter-kit](https://github.com/akveo/ngx-admin/
 
 Charts zur Visualisierung: [ngx-charts](https://github.com/swimlane/ngx-charts)
 
-Datentabelle: [ng2-smart-table] (https://akveo.github.io/ng2-smart-table/#/)
+Datentabelle: [ng2-smart-table](https://akveo.github.io/ng2-smart-table/#/)
 
-CSV Parser: [ngx-papaparse] (https://alberthaff.dk/projects/ngx-papaparse/docs/v4)
-Weitere alternativer CSV Parser: [NgxCsvParser] (https://github.com/tofiqquadri/ngx-csv-parser)
+CSV Parser: [ngx-papaparse](https://alberthaff.dk/projects/ngx-papaparse/docs/v4)
+Weitere alternativer CSV Parser: [NgxCsvParser](https://github.com/tofiqquadri/ngx-csv-parser)
 
 ## Entwicklungsserver
 
