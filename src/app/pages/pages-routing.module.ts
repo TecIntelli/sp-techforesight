@@ -14,6 +14,8 @@ import { LoadDataComponent } from './usecase3/load-data/load-data.component';
 import { NgxHorizontalBarChartComponent } from './usecase3/ngx-horizontalbarchart/ngx-horizontalbarchart.component';
 import { NgxBubbleChartComponent } from './usecase3/ngx-bubblechart/ngx-bubblechart.component';
 
+
+// die einzelnen Komponenten, welche über das Menü verfügbar sein sollen, müssen dem entsprechenden Menüpunkt zugeordnet werden
 const routes: Routes = [{
   path: '',
   component: PagesComponent,

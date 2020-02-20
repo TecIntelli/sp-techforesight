@@ -1,5 +1,9 @@
 import { NbMenuItem } from '@nebular/theme';
 
+/*
+Menüstruktur
+*/
+
 export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Home',
@@ -13,7 +17,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   },
   {
     title: 'Use Case 1',
-    icon: 'bar-chart-outline',
+    icon: 'bar-chart-outline', // individuelles Icon, stammen aus https://akveo.github.io/eva-icons/#/?searchKey=bar&type=outline
     children: [
       {
         title: 'Datenübersicht',
