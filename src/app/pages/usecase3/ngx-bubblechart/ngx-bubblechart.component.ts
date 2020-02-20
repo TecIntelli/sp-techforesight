@@ -5,6 +5,11 @@ import { NbThemeService } from '@nebular/theme';
 import { Papa } from 'ngx-papaparse';
 import { MultiItem, SeriesItem } from '../../../models/datamodelbubblechart';
 
+
+/*
+Komponente umfasst Bubble Chart
+*/
+
 @Component({
   selector: 'ngx-bubblechart',
   templateUrl: './ngx-bubblechart.component.html',
@@ -14,6 +19,7 @@ import { MultiItem, SeriesItem } from '../../../models/datamodelbubblechart';
 
 export class NgxBubbleChartComponent implements OnInit {
 
+  // Farbkombination aus NbThemeService wird im constructor ausgelesen
   constructor(public service: Usedata3Service, private theme: NbThemeService, private papa: Papa) {
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
       const colors: any = config.variables;
@@ -36,15 +42,18 @@ maxRadius: number = 60;
 minRadius: number = 3;
 yScaleMin: number = 0;
 yScaleMax: number = 100;
+xScaleMin: number = 0;
+xScaleMax: number = 100;
 colorScheme: any;
 themeSubscription: any;
 view: any[] = [1500, 600];
 
 selectedItem;
+
   ngOnInit() {
     this.parseCSV(event);
-    this.service.parseCSVforBubbleChart();
-    this.selectedItem = undefined; // initialer Wert nötig, um Datenübersicht zu haben
+    this.service.parseCSVforBubbleChart(); // Funktion liest Daten aus "/services/usedata3.service" aus
+    this.selectedItem = undefined; // initialer Wert nötig, um gesamte Datenübersicht zu laden
   }
 
   result: any;
@@ -68,21 +77,26 @@ selectedItem;
         for (let i = 0; i < results.data.length; i++) {
           const seriesArr = {'name': results.data[i].Thema, 'x': results.data[i].Zuwendungsempfaenger, 'y': results.data[i].Foerderprofil, 'r': results.data[i].FoerdersummeInEUR };
           series.push(seriesArr);
-          // ist keine Eingabe gewählt oder die Option 'Auswahl löschen' des Selects werden Daten aller Länder angezeigt
+          /* ist keine Eingabe gewählt oder die Option 'Auswahl löschen' des Selects werden Daten aller Länder angezeigt,
+           da die Werte in diesen Fälle "null" oder "undefined" sind */
           if (this.selectedItem === undefined || this.selectedItem === null) {
               const multi = new MultiItem(results.data[i].Land, seriesArr);
               apiData.push(multi);
             } else
-                  // die Wahl einer Option passt die Daten im Chart automatisch an
+                  // bei false wird diese Option ausgegeben: die Wahl einer Option passt die Daten im Chart automatisch an
                   if (results.data[i].Land === this.selectedItem) {
                       const multi = new MultiItem(results.data[i].Land, seriesArr);
                       apiData.push(multi);
                     }
         }
+        // Ausgabe der Daten im gewünschten Format Array vom Typ Object
         this.result = [... new Set(apiData.map(x => x.name))].map( x => ({ 'name': x, 'series': []}));
         apiData.forEach(x => this.result.find( y => y.name === x.name).series.push(x.series));
 
-        // Konvertiert die Daten des .csv in den gewünschten Datentyp
+        /* Konvertiert die Daten des .csv in den gewünschten Datentyp,
+           da es inbesondere bei leeren Datenzellen zu Problemen kommen kann.
+           Mit dieser Funktion kann dies bewusst umgangen werden.
+        */
         const dataConvert = this.result.map(item => {
           item.name = String(item.name);
           item.x = String(item.name);
@@ -94,6 +108,7 @@ selectedItem;
 
       },
     };
+    // Ausgabe CSV-Daten in Kombination mit den gewünschten Optionen
     this.papa.parse(csvData, options);
   }
 }

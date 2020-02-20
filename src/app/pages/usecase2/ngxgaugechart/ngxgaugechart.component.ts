@@ -5,6 +5,11 @@ import { Usedata2Service } from '../../../services/usedata2.service';
 import { SeriesItem } from '../../../models/datamodel';
 import { Api2Service } from '../../../services/api2.service';
 
+/*
+Komponente umfasst Gauge Chart
+*/
+
+
 @Component({
   selector: 'ngx-gaugechart',
   templateUrl: './ngxgaugechart.component.html',
@@ -17,7 +22,7 @@ export class NgxGaugeChartComponent implements OnInit {
   constructor(public service: Usedata2Service, public api: Api2Service) { }
 
   ngOnInit() {
-    // Methode aus Service muss eingelesen werden, ansonsten werden die Daten nicht geladen
+    // Methode aus Service muss eingelesen werden, ansonsten werden die Daten aus dem "/services/usedata2.service" nicht geladen
     this.service.ngxInputFormat();
   }
 

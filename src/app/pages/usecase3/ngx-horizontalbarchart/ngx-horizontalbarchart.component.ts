@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Usedata3Service } from '../../../services/usedata3.service';
 import { NbThemeService } from '@nebular/theme';
 
+/*
+Komponente umfasst Horizontal Bar Chart
+*/
+
 @Component({
   selector: 'ngx-barchartgrid',
   templateUrl: './ngx-horizontalbarchart.component.html',
@@ -20,6 +24,7 @@ export class NgxHorizontalBarChartComponent implements OnInit {
     });
   }
 
+ // Daten werden aus folgenden Service ausgelesen "/services/usedata3.service"
   ngOnInit() {
     this.service.parseCSV();
   }

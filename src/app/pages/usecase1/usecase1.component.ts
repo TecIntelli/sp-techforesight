@@ -8,6 +8,12 @@ import { NbSortDirection, NbSortRequest } from '@nebular/theme';
   styleUrls: ['./usecase1.component.scss'],
 })
 
+
+/*
+Komponente umfasst Datentabelle zur Datenübersicht
+*/
+
+
 export class UseCase1Component implements OnInit {
 
 
@@ -33,7 +39,7 @@ export class UseCase1Component implements OnInit {
 /* <--------Datentabelle--------->
     Settings für die Datentabelle
     actions: die Opotion erlaubt das Ein-/Ausblenden einer Tabelle zur Zeilenbearbeitung
-    columns: müssen mit dem Namenswerten aus dem Array übereinstimmen --> der Titel kann individuell vergeben werden
+    columns: müssen mit dem Namenswerten aus dem Array übereinstimmen --> der Titel kann individuell vergeben werden, ist jedoch Hardcoded, d. h. nicht dynamisch
 */
 
   settings = {
@@ -50,6 +56,7 @@ export class UseCase1Component implements OnInit {
       },
   },
 };
+
 
   updateSort(sortRequest: NbSortRequest): void {
     this.sortColumn = sortRequest.column;

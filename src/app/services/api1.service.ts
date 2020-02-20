@@ -6,17 +6,21 @@ import { ApiObject } from '../models/technology.interface';
 
 
 @Injectable()
+
+/* Dieser Service liest Daten aus einer API-Schnittstelle aus
+  */
+
 export class ApiService {
   // Dieser dieser Link kann nach Bedarf ausgestauscht werden.
   api = '../../assets/data/technology-application-format.json';
 
   constructor(private http: HttpClient) { }
 
-  // Http Options
+  // Http Optionen
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      // 'Authorization': 'jwt-token'  <<--- API Key
+      'Content-Type': 'application/json', // weist daraufhin, dass die angefragten Daten im Format JSON sind
+      // 'Authorization': 'jwt-token'  <<--- API Key (ist ein Key vorhanden muss dieser Teil eingefügt werden)
     } ),
   };
 
@@ -37,7 +41,8 @@ export class ApiService {
       'The API doesn´t work, please try again later.');
   }
 
-  // Funktion zum Abruft der Daten aus dem API, der Rückgabewert ist ein Observable
+  // Funktion zum Abruft der Daten aus dem API, der Rückgabewert ist ein Observable vom Typ ApiObject
+  // siehe hierzu in src/app/models/technology.interface.ts --> um das entsprechend hinterlegte Datenmodel zu sehen
   // nach 3 Versuchen wir ein Error geworfen
   getData(): Observable<ApiObject> {
     return this.http.get<ApiObject>(this.api, this.httpOptions).pipe(

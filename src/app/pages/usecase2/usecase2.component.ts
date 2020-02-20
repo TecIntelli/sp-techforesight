@@ -1,7 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Usedata2Service } from '../../services/usedata2.service';
 import { NbSortDirection, NbSortRequest } from '@nebular/theme';
 
+/*
+Komponente umfasst Datentabelle zur Datenübersicht
+*/
 
 @Component({
   selector: 'ngx-usecase2',

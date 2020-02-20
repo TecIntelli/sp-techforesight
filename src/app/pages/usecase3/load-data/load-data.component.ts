@@ -3,10 +3,14 @@ import { NgxCsvParser } from 'ngx-csv-parser';
 import { NgxCSVParserError } from 'ngx-csv-parser';
 import { NbSortDirection, NbSortRequest } from '@nebular/theme';
 
+/*
+Komponente umfasst manuellen CSV-Upload
+*/
+
 @Component({
   selector: 'load-data',
   templateUrl: './load-data.component.html',
-  styleUrls: ['./load-data.component.scss']
+  styleUrls: ['./load-data.component.scss'],
 })
 export class LoadDataComponent implements OnInit {
 
@@ -55,6 +59,11 @@ export class LoadDataComponent implements OnInit {
 /* -------------Datentabelle------------------------------ */
 sortColumn: string;
 sortDirection: NbSortDirection = NbSortDirection.NONE;
+
+/*
+columns: müssen mit Spaltennamen im CSV übereinstimmen, ansonsten bleibt Spalte leer
+title: kann individuell vergeben werden
+*/
 
  settings = {
    actions: false,

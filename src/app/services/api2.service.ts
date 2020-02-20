@@ -3,16 +3,22 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { ApiObject } from '../models/technology.interface';
+
+
+/* Dieser Service liest Daten aus einer API-Schnittstelle aus.
+Detailliertere Kommentare finden sich in api1.service.ts
+  */
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class Api2Service {
-
+  // Dieser dieser Link kann nach Bedarf ausgestauscht werden.
   api = '../../assets/data/technology-expert-format.json';
 
   constructor(private http: HttpClient) { }
 
-  // Http Options
+  // Http Optionen
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

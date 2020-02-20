@@ -18,6 +18,7 @@
       <nb-card-header>Bubble Chart</nb-card-header>
       <nb-card-body>
         <p>Bitte wähle zuerst eine Option aus:</p>
+        <!-- Optionen zur Konfiguration des Dropdown-Menü -->
         <nb-select fullWidth=true placeholder="Select Entry" [(selected)]="selectedItem" (selectedChange)="parseCSV($event)">
           <nb-option [value]="null">Gesamtansicht</nb-option>
           <nb-option *ngFor="let o of service.DataforBubbleChart$ | async" [value]="o.name">{{ o.name }}</nb-option>

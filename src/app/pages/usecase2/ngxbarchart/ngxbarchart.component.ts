@@ -11,8 +11,13 @@ import { Usedata2Service } from '../../../services/usedata2.service';
   providers: [Usedata2Service],
 })
 
+/*
+Komponente umfasst Bar Chart
+*/
+
 export class NGXBarChartComponent implements OnInit {
 
+  // constructor beinhaltet neben dem Service, auch Funktion um Farbenkombination aus NbThemeService auszulesen
   constructor(public service: Usedata2Service, private theme: NbThemeService) {
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
       const colors: any = config.variables;
@@ -23,7 +28,7 @@ export class NGXBarChartComponent implements OnInit {
   }
 
  ngOnInit() {
-  // Methode aus Service muss eingelesen werden, ansonsten werden die Daten nicht geladen
+  // Methode aus Service muss eingelesen werden, ansonsten werden die Daten aus dem "/services/usedata2.service" nicht geladen
   this.service.ngxInputFormat();
   }
 

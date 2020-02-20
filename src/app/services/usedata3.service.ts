@@ -18,7 +18,7 @@ Dieser Service konvertiert die Daten aus dem CSV in ein Array.
 private Data = new BehaviorSubject<any[]>([]);
 Data$ = this.Data.asObservable();
 
-// Daten zur Einlese für das Chart
+// Daten zur Einlese für das Horizontal Bar Chart
 private DataForHorizontalBarChart = new BehaviorSubject<any[]>([]);
 DataForHorizontalBarChart$ = this.DataForHorizontalBarChart.asObservable();
 
@@ -54,7 +54,7 @@ DataForHorizontalBarChart$ = this.DataForHorizontalBarChart.asObservable();
                                   item.value = Number(item.value);
                                   return item;
                                 });
-            console.log(dataConvert);
+            // console.log(dataConvert);
 
         // speichert die Daten als BehaviourSubject
           this.DataForHorizontalBarChart.next(series);
@@ -64,6 +64,8 @@ DataForHorizontalBarChart$ = this.DataForHorizontalBarChart.asObservable();
     };
     this.papa.parse(csvData, options);
   }
+
+  // Funktion zum Auslesen der CSV-Daten und konvertieren für das Bubble Chart
 
   private DataforBubbleChart = new BehaviorSubject<any[]>([]);
   DataforBubbleChart$ = this.DataforBubbleChart.asObservable();
@@ -80,14 +82,18 @@ DataForHorizontalBarChart$ = this.DataForHorizontalBarChart.asObservable();
       complete: (results, file) => {
       const apiData: MultiItem[] = [];
       const series: Array <SeriesItem> = [];
+        // alle Datensätze werden durchlaufen
         for (let i = 0; i < results.data.length; i++) {
           const seriesArr = {'name': results.data[i].Zuwendungsempfaenger, 'value': results.data[i].FoerdersummeInEUR};
+          // Aufbau der Serie aus den Werte series in der "const seriesArr"
           series.push(seriesArr);
+          // Erstellung MultiItem aus Wert und seriesArr; die Werte aus dem "seriesArr" werden jeweils dem "results.data[i].Land" zugeordnet
           const multi = new MultiItem(results.data[i].Land, seriesArr);
           apiData.push(multi);
           }
           this.result = [... new Set(apiData.map(x => x.name))].map( x => ({ 'name': x, 'series': []}));
           apiData.forEach(x => this.result.find( y => y.name === x.name).series.push(x.series));
+          // Array an Observable übergeben
           this.DataforBubbleChart.next(this.result);
         },
     };

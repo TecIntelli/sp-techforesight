@@ -8,6 +8,11 @@ import { UsedataService } from '../../../services/usedata1.service';
   styleUrls: ['./heatmap.component.scss'],
   providers: [UsedataService],
 })
+
+/*
+Komponente umfasst Heatmap Chart
+*/
+
 export class NGXHeatmapComponent implements OnInit {
 
   constructor( public service: UsedataService ) { }
@@ -15,7 +20,7 @@ export class NGXHeatmapComponent implements OnInit {
 
 
  ngOnInit() {
-  // Methode aus Service muss eingelesen werden, ansonsten werden die Daten nicht geladen
+  // Methode aus Service muss eingelesen werden, ansonsten werden die Daten aus dem "/services/usedata1.service" nicht geladen
   this.service.ngxInputFormat();
   }
 
@@ -23,6 +28,7 @@ export class NGXHeatmapComponent implements OnInit {
   view: any[] = [600, 400];
 
   // Optionen zur Konfiguration des Heatmap
+  // Optionen müssen auch im dazugehörigen Template hinterlegt sein
   showXAxis = true;
   showYAxis = true;
   gradient = true;

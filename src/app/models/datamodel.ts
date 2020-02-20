@@ -1,18 +1,5 @@
-/*
-  //Datamodel für transformJSON
-
-export interface SeriesItem {
-  name: string;
-  value: number;
-}
-
-export interface MultiItem {
-  name: string;
-  series: SeriesItem[];
-} */
-
-
-  //Datamodel für ngxInputFormat
+  // mit Hilfe des Datenmodells können die abgerufenen Datensätze in das gewünschte Format gebracht werden
+  // in diesem Fall das spezielle Format für ngx-charts
 
   export class SeriesItem {
   name: string;

@@ -1,4 +1,5 @@
-// Eine alternative Definition für das API-Objekt mit einem Array von Element
+// Das Datenmodel orientiert sich am Aufbau der JSON-Datei und konventiert sie in TypeScript
+
 export interface ApiObject {
   meta: {
     project: {

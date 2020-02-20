@@ -1,4 +1,5 @@
 // Datenmodell für das Bubble Chart
+// mit Hilfe des Datenmodells können die abgerufenen Datensätze in das gewünschte Format gebracht werden
 
 export class SeriesItem {
   name: string;
