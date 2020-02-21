@@ -19,7 +19,7 @@ private Data = new BehaviorSubject<any[]>([]);
 Data$ = this.Data.asObservable();
 
 // Daten zur Einlese für das Horizontal Bar Chart
-private DataForHorizontalBarChart = new BehaviorSubject<any[]>([]);
+public DataForHorizontalBarChart = new BehaviorSubject<any[]>([]);
 DataForHorizontalBarChart$ = this.DataForHorizontalBarChart.asObservable();
 
     parseCSV() {
