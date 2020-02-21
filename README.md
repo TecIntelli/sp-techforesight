@@ -40,6 +40,6 @@ ng build --prod
 
 1.	Ausführen eines Build zur Produktivsetzung der Applikation:
 2.	Geben Sie den Ausdruck „ng build –prod“ in der Kommandozeile ein
-3.	In Folge desse erstellt das Angular CLI kompakte Bundles und legt sie im Ord-ner „dist/“ ab. Sind für die Ausführungen weitere Dateien erforderlich, werden diese hinzugefügt.
+3.	In Folge dessen erstellt das Angular CLI kompakte Bundles und legt sie im Ord-ner „dist/“ ab. Sind für die Ausführungen weitere Dateien erforderlich, werden diese hinzugefügt.
 
 
