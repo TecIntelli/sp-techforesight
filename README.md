@@ -14,7 +14,7 @@ CSV Parser: [ngx-papaparse](https://alberthaff.dk/projects/ngx-papaparse/docs/v4
 Weitere alternativer CSV Parser: [NgxCsvParser](https://github.com/tofiqquadri/ngx-csv-parser)
 
 
-## Voraussetzung zur Installation und dem Aufsetzen eines Entwicklungs
+## Voraussetzung zur Installation und dem Aufsetzen einer Entwicklungsumgebung
 Um die Applikation auf ihrem Rechner ausführen zu können, sind folgende Programme auf ihrem Rechner vorauszusetzen:
 *JavaScript Laufzeit Umgebung Node.js (https://nodejs.org/de/)
 *Paketmanager npm (https://www.npmjs.com/package/npm)
