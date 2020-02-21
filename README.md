@@ -22,24 +22,26 @@ Um die Applikation auf ihrem Rechner ausführen zu können, sind folgende Progra
 *Browser (z. B. Chrome)
 *integrierte Entwicklungsumgebung (IDE) mit einem TypeScript-Compiler und einem Texteditor (z. B. Visual Studio Code)
 
-Laden Sie die aktuellen Dateien auf dieser Github Seite (https://github.com/TecIntelli/sp-techforesight) herunter und führen Sie die Anweisung"npm install" aus, um alle notwendigen Module herunterzuladen.
+1.	Laden Sie die aktuellen Dateien zur entwickelten Visualisierungslösung auf dieser GitHub-Seite herunter.
+2.	Führen Sie die Anweisung „npm install“ in der Kommandozeile aus, um alle notwendigen Module für die Anwendung herunterzuladen.
 
+Hinweis:
+Alle notwendigen Module sind in den Dateien „package.json“ und „package-lock.json“ hinterlegt. Mit dem Ausführen des Befehls „npm install“ in der Kommandozeile werden die notwendigen Module zur Ausführung der Applikation installiert.
 
 ## Entwicklungsumgebung/ -server
 
 Zum Aufruf des Entwicklungsservers und der Entwicklungsumgebung ist wie folgt vorzugehen:
-1.	Zur Ausführung der Applikation auf dem Entwicklungsserver sind folgende Schritte durchzuführen
-2.	Geben Sie den Ausdruck „ng serve“ in die Kommandozeile an
-3.  Aufruf der Applikation über folgenden Link im Browser möglich: http://localhost:4200/ 
-4.  Hinweis: Werden Änderungen im Quellcode durchgeführt und gespeichert, aktualisiert sich die Applikation in ihrem      Browser automisch. Falls nicht laden Sie den Browser erneut.
+1.	Geben Sie den Ausdruck „ng serve“ in die Kommandozeile an
+2.  Aufruf der Applikation über folgenden Link im Browser möglich: http://localhost:4200/ 
+3.  Hinweis: Werden Änderungen im Quellcode durchgeführt und gespeichert, aktualisiert sich die Applikation in ihrem      Browser automatisch. Falls nicht laden Sie den Browser erneut.
 
 ## Build
 
-Folgende Anweisung erstellt ein 'Build' des Projekts für die Produktivumgebung:
+Folgende Anweisung erstellt ein "Build" des Projekts für die Produktivumgebung:
 ng build --prod
 
 1.	Ausführen eines Build zur Produktivsetzung der Applikation:
-2.	Geben Sie den Ausdruck „ng build –prod“ in der Kommandozeile ein
-3.	In Folge dessen erstellt das Angular CLI kompakte Bundles und legt sie im Ord-ner „dist/“ ab. Sind für die Ausführungen weitere Dateien erforderlich, werden diese hinzugefügt.
+2.	Geben Sie den Ausdruck „ng build --prod“ in der Kommandozeile ein
+3.	In Folge dessen erstellt das Angular CLI kompakte Bundles und legt sie im Ordner „dist/“ ab. Sind für die Ausführungen weitere Dateien erforderlich, werden diese ebenfalls hinzugefügt.
 
 
